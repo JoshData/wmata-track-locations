@@ -61,12 +61,23 @@ tracks = list(map(make_track, routes["StandardRoutes"]))
 with open("tracks.json", "w") as f:
 	f.write(json.dumps(tracks, indent=2))
 
+def extract_stations():
+	seen_stations = set()
+	for tract in tracks:
+		for circuit in tract["locations"]:
+			if "station" in circuit:
+				if circuit["station"]["Code"] in seen_stations: continue
+				seen_stations.add(circuit["station"]["Code"])
+				yield circuit
+
 tracks_geojson = collections.OrderedDict([
 	("type", "FeatureCollection"),
-	("features", [
+	("features",
+	[
 		collections.OrderedDict([
 			("type", "Feature"),
 			("properties", collections.OrderedDict([
+				("type", "track"),
 				("line", track["line"]),
 				("track", track["track"]),
 			])),
@@ -76,7 +87,23 @@ tracks_geojson = collections.OrderedDict([
 	        ]))
 		])
 		for track in tracks
-	])
+	]
+	+ [
+		collections.OrderedDict([
+			("type", "Feature"),
+			("properties", collections.OrderedDict([
+				("type", "station"),
+				("code", circuit["station"]["Code"]),
+				("name", circuit["station"]["Name"]),
+			])),
+			("geometry", collections.OrderedDict([
+	   	        ("type", "Point"),
+	       	    ("coordinates", [circuit["location"]["lng"], circuit["location"]["lat"]]),
+	        ]))
+		])
+		for circuit in extract_stations()
+	]
+	)
 ])
 with open("tracks.geojson", "w") as f:
 	f.write(json.dumps(tracks_geojson, indent=2))
