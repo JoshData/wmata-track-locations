@@ -45,7 +45,7 @@ for circuit, coords in circuit_coordinates.items():
 def make_location(circuit):
 	ret = collections.OrderedDict()
 	ret["circuit"] = circuit["CircuitId"]
-	if circuit["StationCode"]: ret["station"] = stations[circuit["StationCode"]]
+	if circuit["StationCode"]: ret["station"] = collections.OrderedDict(sorted(stations[circuit["StationCode"]].items()))
 	if circuit["CircuitId"] in circuit_coordinates: ret["location"] = dict(zip(("lng", "lat"), proj(*circuit_coordinates[circuit["CircuitId"]], inverse=True)))
 	return ret
 def make_track(route):
