@@ -14,10 +14,10 @@
         "circuit": 2604,
         "station": {
           "Address": {
-            "Zip": "22150",
             "Street": "6880 Frontier Drive",
-            "State": "VA",
-            "City": "Springfield"
+            "City": "Springfield",
+            "Zip": "22150",
+            "State": "VA"
           },
           "Code": "J03",
           "Lat": 38.766129,
@@ -202,8 +202,8 @@
       {
         "circuit": 2629,
         "location": {
-          "lat": 38.79788499999997,
-          "lng": -77.13905299999999
+          "lat": 38.798187999999975,
+          "lng": -77.136735
         }
       },
       {
@@ -238,10 +238,10 @@
         "circuit": 2634,
         "station": {
           "Address": {
-            "Zip": "22310",
             "Street": "5690 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22310",
+            "State": "VA"
           },
           "Code": "J02",
           "Lat": 38.799193,
@@ -537,10 +537,10 @@
         "circuit": 969,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -604,10 +604,10 @@
         "circuit": 976,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -852,10 +852,10 @@
         "circuit": 1010,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -964,10 +964,10 @@
         "circuit": 1024,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -1066,10 +1066,10 @@
         "circuit": 1036,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -1188,10 +1188,10 @@
         "circuit": 1052,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -1328,10 +1328,10 @@
         "circuit": 1070,
         "station": {
           "Address": {
-            "Zip": "22211",
             "Street": "1000 North Memorial Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22211",
+            "State": "VA"
           },
           "Code": "C06",
           "Lat": 38.884574,
@@ -1488,10 +1488,10 @@
         "circuit": 1092,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -1597,10 +1597,10 @@
         "circuit": 1105,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -1691,10 +1691,10 @@
         "circuit": 1117,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -1764,10 +1764,10 @@
         "circuit": 1126,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -1845,10 +1845,10 @@
         "circuit": 1135,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -1912,10 +1912,10 @@
         "circuit": 1384,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -1989,10 +1989,10 @@
         "circuit": 1393,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -2056,10 +2056,10 @@
         "circuit": 1400,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -2116,10 +2116,10 @@
         "circuit": 1406,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -2210,10 +2210,10 @@
         "circuit": 1418,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -2270,10 +2270,10 @@
         "circuit": 1424,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -2364,10 +2364,10 @@
         "circuit": 1436,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -2431,10 +2431,10 @@
         "circuit": 1443,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -2651,10 +2651,10 @@
         "circuit": 2420,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4500 Benning Road",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "G01",
           "Lat": 38.890488,
@@ -2767,10 +2767,10 @@
         "circuit": 2434,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "133 Central Avenue",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G02",
           "Lat": 38.889757,
@@ -2882,10 +2882,10 @@
         "circuit": 2449,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "100 Addison Road S.",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G03",
           "Lat": 38.886713,
@@ -2962,8 +2962,8 @@
       {
         "circuit": 2458,
         "location": {
-          "lat": 38.89124799999998,
-          "lng": -76.87459999999999
+          "lat": 38.89051200000001,
+          "lng": -76.87648599999999
         }
       },
       {
@@ -3032,10 +3032,10 @@
         "circuit": 2469,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "300 Garrett Morgan Blvd.",
-            "State": "MD",
-            "City": "Landover"
+            "City": "Landover",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "G04",
           "Lat": 38.8913,
@@ -3084,8 +3084,8 @@
       {
         "circuit": 2474,
         "location": {
-          "lat": 38.895899,
-          "lng": -76.859831
+          "lat": 38.89611599999999,
+          "lng": -76.857017
         }
       },
       {
@@ -3172,10 +3172,10 @@
         "circuit": 2487,
         "station": {
           "Address": {
-            "Zip": "20774",
             "Street": "Largo Town Center 9000 Lottsford Road",
-            "State": "MD",
-            "City": "Largo"
+            "City": "Largo",
+            "Zip": "20774",
+            "State": "MD"
           },
           "Code": "G05",
           "Lat": 38.9008,
@@ -3217,10 +3217,10 @@
         "circuit": 2679,
         "station": {
           "Address": {
-            "Zip": "22150",
             "Street": "6880 Frontier Drive",
-            "State": "VA",
-            "City": "Springfield"
+            "City": "Springfield",
+            "Zip": "22150",
+            "State": "VA"
           },
           "Code": "J03",
           "Lat": 38.766129,
@@ -3441,10 +3441,10 @@
         "circuit": 2709,
         "station": {
           "Address": {
-            "Zip": "22310",
             "Street": "5690 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22310",
+            "State": "VA"
           },
           "Code": "J02",
           "Lat": 38.799193,
@@ -3772,10 +3772,10 @@
         "circuit": 1162,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -3846,10 +3846,10 @@
         "circuit": 1170,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -4098,10 +4098,10 @@
         "circuit": 1204,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -4146,8 +4146,8 @@
       {
         "circuit": 1209,
         "location": {
-          "lat": 38.85524799999999,
-          "lng": -77.04486799999998
+          "lat": 38.854577,
+          "lng": -77.04459299999999
         }
       },
       {
@@ -4203,10 +4203,10 @@
         "circuit": 1217,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -4312,10 +4312,10 @@
         "circuit": 1230,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -4434,10 +4434,10 @@
         "circuit": 1246,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -4503,8 +4503,8 @@
       {
         "circuit": 1254,
         "location": {
-          "lat": 38.87279099999998,
-          "lng": -77.05175299999998
+          "lat": 38.87226999999998,
+          "lng": -77.051601
         }
       },
       {
@@ -4538,8 +4538,8 @@
       {
         "circuit": 1259,
         "location": {
-          "lat": 38.879321000000004,
-          "lng": -77.058751
+          "lat": 38.87782199999998,
+          "lng": -77.05724099999999
         }
       },
       {
@@ -4581,10 +4581,10 @@
         "circuit": 1265,
         "station": {
           "Address": {
-            "Zip": "22211",
             "Street": "1000 North Memorial Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22211",
+            "State": "VA"
           },
           "Code": "C06",
           "Lat": 38.884574,
@@ -4727,10 +4727,10 @@
         "circuit": 1285,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -4836,10 +4836,10 @@
         "circuit": 1298,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -4930,10 +4930,10 @@
         "circuit": 1310,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -5027,10 +5027,10 @@
         "circuit": 1323,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -5094,10 +5094,10 @@
         "circuit": 1330,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -5154,10 +5154,10 @@
         "circuit": 1549,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -5238,10 +5238,10 @@
         "circuit": 1559,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -5319,10 +5319,10 @@
         "circuit": 1568,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -5386,10 +5386,10 @@
         "circuit": 1575,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -5501,10 +5501,10 @@
         "circuit": 1590,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -5575,10 +5575,10 @@
         "circuit": 1598,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -5669,10 +5669,10 @@
         "circuit": 1610,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -5743,10 +5743,10 @@
         "circuit": 1618,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -5960,10 +5960,10 @@
         "circuit": 2506,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4500 Benning Road",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "G01",
           "Lat": 38.890488,
@@ -6083,10 +6083,10 @@
         "circuit": 2521,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "133 Central Avenue",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G02",
           "Lat": 38.889757,
@@ -6205,10 +6205,10 @@
         "circuit": 2537,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "100 Addison Road S.",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G03",
           "Lat": 38.886713,
@@ -6355,10 +6355,10 @@
         "circuit": 2557,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "300 Garrett Morgan Blvd.",
-            "State": "MD",
-            "City": "Landover"
+            "City": "Landover",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "G04",
           "Lat": 38.8913,
@@ -6492,10 +6492,10 @@
         "circuit": 2574,
         "station": {
           "Address": {
-            "Zip": "20774",
             "Street": "Largo Town Center 9000 Lottsford Road",
-            "State": "MD",
-            "City": "Largo"
+            "City": "Largo",
+            "Zip": "20774",
+            "State": "MD"
           },
           "Code": "G05",
           "Lat": 38.9008,
@@ -6537,10 +6537,10 @@
         "circuit": 2118,
         "station": {
           "Address": {
-            "Zip": "20746",
             "Street": "4704 Old Soper Road",
-            "State": "MD",
-            "City": "Suitland"
+            "City": "Suitland",
+            "Zip": "20746",
+            "State": "MD"
           },
           "Code": "F11",
           "Lat": 38.826995,
@@ -6677,10 +6677,10 @@
         "circuit": 2136,
         "station": {
           "Address": {
-            "Zip": "20746",
             "Street": "4500 Silver Hill Road",
-            "State": "MD",
-            "City": "Suitland"
+            "City": "Suitland",
+            "Zip": "20746",
+            "State": "MD"
           },
           "Code": "F10",
           "Lat": 38.843891,
@@ -6743,8 +6743,8 @@
       {
         "circuit": 2143,
         "location": {
-          "lat": 38.850115999999986,
-          "lng": -76.944249
+          "lat": 38.851035999999986,
+          "lng": -76.94571199999999
         }
       },
       {
@@ -6813,10 +6813,10 @@
         "circuit": 2154,
         "station": {
           "Address": {
-            "Zip": "20748",
             "Street": "3101 Branch Avenue",
-            "State": "MD",
-            "City": "Temple Hills"
+            "City": "Temple Hills",
+            "Zip": "20748",
+            "State": "MD"
           },
           "Code": "F09",
           "Lat": 38.851187,
@@ -6943,10 +6943,10 @@
         "circuit": 2170,
         "station": {
           "Address": {
-            "Zip": "20748",
             "Street": "1411 Southern Avenue",
-            "State": "MD",
-            "City": "Temple Hills"
+            "City": "Temple Hills",
+            "Zip": "20748",
+            "State": "MD"
           },
           "Code": "F08",
           "Lat": 38.840974,
@@ -7044,10 +7044,10 @@
         "circuit": 2183,
         "station": {
           "Address": {
-            "Zip": "20020",
             "Street": "1290 Alabama Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20020",
+            "State": "DC"
           },
           "Code": "F07",
           "Lat": 38.845334,
@@ -7162,10 +7162,10 @@
         "circuit": 2199,
         "station": {
           "Address": {
-            "Zip": "20020",
             "Street": "1101 Howard Road SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20020",
+            "State": "DC"
           },
           "Code": "F06",
           "Lat": 38.862072,
@@ -7243,10 +7243,10 @@
         "circuit": 2208,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "200 M Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "F05",
           "Lat": 38.876588,
@@ -7330,10 +7330,10 @@
         "circuit": 2219,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "399 M Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F04",
           "Lat": 38.876221,
@@ -7428,10 +7428,10 @@
         "circuit": 2231,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -7508,10 +7508,10 @@
         "circuit": 2241,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -7561,10 +7561,10 @@
         "circuit": 2246,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -7645,10 +7645,10 @@
         "circuit": 1753,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -7736,10 +7736,10 @@
         "circuit": 1764,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -7809,10 +7809,10 @@
         "circuit": 1773,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -7890,10 +7890,10 @@
         "circuit": 1782,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -7956,8 +7956,8 @@
       {
         "circuit": 1789,
         "location": {
-          "lat": 38.93499899999997,
-          "lng": -77.025222
+          "lat": 38.93417099999999,
+          "lng": -77.025836
         }
       },
       {
@@ -7998,10 +7998,10 @@
         "circuit": 1796,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -8050,8 +8050,8 @@
       {
         "circuit": 1801,
         "location": {
-          "lat": 38.94584599999997,
-          "lng": -77.017163
+          "lat": 38.947319,
+          "lng": -77.01582299999998
         }
       },
       {
@@ -8107,10 +8107,10 @@
         "circuit": 1809,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -8285,10 +8285,10 @@
         "circuit": 1833,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "2700 Hamilton St.",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E07",
           "Lat": 38.954931,
@@ -8414,10 +8414,10 @@
         "circuit": 1850,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "3575 East West Highway",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E08",
           "Lat": 38.965276,
@@ -8571,10 +8571,10 @@
         "circuit": 1871,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "4931 Calvert Road",
-            "State": "MD",
-            "City": "College Park"
+            "City": "College Park",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E09",
           "Lat": 38.978523,
@@ -8746,10 +8746,10 @@
         "circuit": 1894,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "5717 Greenbelt Metro Drive",
-            "State": "MD",
-            "City": "Greenbelt"
+            "City": "Greenbelt",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E10",
           "Lat": 39.011036,
@@ -8791,10 +8791,10 @@
         "circuit": 2255,
         "station": {
           "Address": {
-            "Zip": "20746",
             "Street": "4704 Old Soper Road",
-            "State": "MD",
-            "City": "Suitland"
+            "City": "Suitland",
+            "Zip": "20746",
+            "State": "MD"
           },
           "Code": "F11",
           "Lat": 38.826995,
@@ -8924,10 +8924,10 @@
         "circuit": 2272,
         "station": {
           "Address": {
-            "Zip": "20746",
             "Street": "4500 Silver Hill Road",
-            "State": "MD",
-            "City": "Suitland"
+            "City": "Suitland",
+            "Zip": "20746",
+            "State": "MD"
           },
           "Code": "F10",
           "Lat": 38.843891,
@@ -9067,10 +9067,10 @@
         "circuit": 2291,
         "station": {
           "Address": {
-            "Zip": "20748",
             "Street": "3101 Branch Avenue",
-            "State": "MD",
-            "City": "Temple Hills"
+            "City": "Temple Hills",
+            "Zip": "20748",
+            "State": "MD"
           },
           "Code": "F09",
           "Lat": 38.851187,
@@ -9169,10 +9169,10 @@
         "circuit": 2303,
         "station": {
           "Address": {
-            "Zip": "20748",
             "Street": "1411 Southern Avenue",
-            "State": "MD",
-            "City": "Temple Hills"
+            "City": "Temple Hills",
+            "Zip": "20748",
+            "State": "MD"
           },
           "Code": "F08",
           "Lat": 38.840974,
@@ -9277,10 +9277,10 @@
         "circuit": 2317,
         "station": {
           "Address": {
-            "Zip": "20020",
             "Street": "1290 Alabama Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20020",
+            "State": "DC"
           },
           "Code": "F07",
           "Lat": 38.845334,
@@ -9399,10 +9399,10 @@
         "circuit": 2333,
         "station": {
           "Address": {
-            "Zip": "20020",
             "Street": "1101 Howard Road SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20020",
+            "State": "DC"
           },
           "Code": "F06",
           "Lat": 38.862072,
@@ -9480,10 +9480,10 @@
         "circuit": 2342,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "200 M Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "F05",
           "Lat": 38.876588,
@@ -9560,10 +9560,10 @@
         "circuit": 2352,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "399 M Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F04",
           "Lat": 38.876221,
@@ -9662,10 +9662,10 @@
         "circuit": 2364,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -9703,8 +9703,8 @@
       {
         "circuit": 2368,
         "location": {
-          "lat": 38.886226,
-          "lng": -77.021939
+          "lat": 38.885122999999986,
+          "lng": -77.02193799999999
         }
       },
       {
@@ -9756,10 +9756,10 @@
         "circuit": 2376,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -9794,8 +9794,8 @@
       {
         "circuit": 2379,
         "location": {
-          "lat": 38.895013999999996,
-          "lng": -77.021973
+          "lat": 38.89618100000001,
+          "lng": -77.021974
         }
       },
       {
@@ -9809,10 +9809,10 @@
         "circuit": 1899,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -9903,10 +9903,10 @@
         "circuit": 1911,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -9997,10 +9997,10 @@
         "circuit": 1923,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -10070,10 +10070,10 @@
         "circuit": 1932,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -10158,10 +10158,10 @@
         "circuit": 1942,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -10266,10 +10266,10 @@
         "circuit": 1956,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -10389,10 +10389,10 @@
         "circuit": 1971,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -10550,10 +10550,10 @@
         "circuit": 1992,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "2700 Hamilton St.",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E07",
           "Lat": 38.954931,
@@ -10675,10 +10675,10 @@
         "circuit": 2009,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "3575 East West Highway",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E08",
           "Lat": 38.965276,
@@ -10832,10 +10832,10 @@
         "circuit": 2030,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "4931 Calvert Road",
-            "State": "MD",
-            "City": "College Park"
+            "City": "College Park",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E09",
           "Lat": 38.978523,
@@ -11017,10 +11017,10 @@
         "circuit": 2055,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "5717 Greenbelt Metro Drive",
-            "State": "MD",
-            "City": "Greenbelt"
+            "City": "Greenbelt",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E10",
           "Lat": 39.011036,
@@ -11062,10 +11062,10 @@
         "circuit": 2774,
         "station": {
           "Address": {
-            "Zip": "22031",
             "Street": "9550 Saintsbury Drive",
-            "State": "VA",
-            "City": "Fairfax"
+            "City": "Fairfax",
+            "Zip": "22031",
+            "State": "VA"
           },
           "Code": "K08",
           "Lat": 38.877693,
@@ -11230,10 +11230,10 @@
         "circuit": 2796,
         "station": {
           "Address": {
-            "Zip": "22180",
             "Street": "2700 Gallows Road",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22180",
+            "State": "VA"
           },
           "Code": "K07",
           "Lat": 38.883015,
@@ -11303,8 +11303,8 @@
       {
         "circuit": 2804,
         "location": {
-          "lat": 38.89442400000001,
-          "lng": -77.20458699999999
+          "lat": 38.89302799999997,
+          "lng": -77.20700599999999
         }
       },
       {
@@ -11387,10 +11387,10 @@
         "circuit": 2817,
         "station": {
           "Address": {
-            "Zip": "22043",
             "Street": "7040 Haycock Road",
-            "State": "VA",
-            "City": "Falls Church"
+            "City": "Falls Church",
+            "Zip": "22043",
+            "State": "VA"
           },
           "Code": "K06",
           "Lat": 38.90067,
@@ -11578,10 +11578,10 @@
         "circuit": 2844,
         "station": {
           "Address": {
-            "Zip": "22205",
             "Street": "2001 N. Sycamore St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22205",
+            "State": "VA"
           },
           "Code": "K05",
           "Lat": 38.885841,
@@ -11770,10 +11770,10 @@
         "circuit": 2870,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "4230 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K04",
           "Lat": 38.882071,
@@ -11896,10 +11896,10 @@
         "circuit": 2886,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3600 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K03",
           "Lat": 38.88331,
@@ -11976,8 +11976,8 @@
       {
         "circuit": 2895,
         "location": {
-          "lat": 38.88672299999999,
-          "lng": -77.09542899999998
+          "lat": 38.88615799999999,
+          "lng": -77.096615
         }
       },
       {
@@ -11998,10 +11998,10 @@
         "circuit": 2898,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K02",
           "Lat": 38.886373,
@@ -12099,10 +12099,10 @@
         "circuit": 2911,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "2100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K01",
           "Lat": 38.891499,
@@ -12246,10 +12246,10 @@
         "circuit": 1092,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -12355,10 +12355,10 @@
         "circuit": 1105,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -12449,10 +12449,10 @@
         "circuit": 1117,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -12522,10 +12522,10 @@
         "circuit": 1126,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -12603,10 +12603,10 @@
         "circuit": 1135,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -12670,10 +12670,10 @@
         "circuit": 1384,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -12747,10 +12747,10 @@
         "circuit": 1393,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -12814,10 +12814,10 @@
         "circuit": 1400,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -12874,10 +12874,10 @@
         "circuit": 1406,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -12968,10 +12968,10 @@
         "circuit": 1418,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -13028,10 +13028,10 @@
         "circuit": 1424,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -13122,10 +13122,10 @@
         "circuit": 1436,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -13189,10 +13189,10 @@
         "circuit": 1443,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -13423,10 +13423,10 @@
         "circuit": 1475,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4000 Minnesota Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "D09",
           "Lat": 38.898284,
@@ -13525,10 +13525,10 @@
         "circuit": 1487,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4720 Minnesota Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "D10",
           "Lat": 38.907734,
@@ -13634,10 +13634,10 @@
         "circuit": 1500,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "5501 Columbia Park",
-            "State": "MD",
-            "City": "Cheverly"
+            "City": "Cheverly",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "D11",
           "Lat": 38.91652,
@@ -13798,10 +13798,10 @@
         "circuit": 1522,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "3000 Pennsy Drive",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "D12",
           "Lat": 38.934411,
@@ -13892,8 +13892,8 @@
       {
         "circuit": 1533,
         "location": {
-          "lat": 38.943646,
-          "lng": -76.87698699999999
+          "lat": 38.944412999999976,
+          "lng": -76.87608899999998
         }
       },
       {
@@ -13941,8 +13941,8 @@
       {
         "circuit": 1540,
         "location": {
-          "lat": 38.94673599999998,
-          "lng": -76.87325399999999
+          "lat": 38.947154,
+          "lng": -76.87277599999999
         }
       },
       {
@@ -13956,10 +13956,10 @@
         "circuit": 1542,
         "station": {
           "Address": {
-            "Zip": "20784",
             "Street": "4700 Garden City Drive",
-            "State": "MD",
-            "City": "New Carrollton"
+            "City": "New Carrollton",
+            "Zip": "20784",
+            "State": "MD"
           },
           "Code": "D13",
           "Lat": 38.947674,
@@ -14001,10 +14001,10 @@
         "circuit": 2933,
         "station": {
           "Address": {
-            "Zip": "22031",
             "Street": "9550 Saintsbury Drive",
-            "State": "VA",
-            "City": "Fairfax"
+            "City": "Fairfax",
+            "Zip": "22031",
+            "State": "VA"
           },
           "Code": "K08",
           "Lat": 38.877693,
@@ -14162,10 +14162,10 @@
         "circuit": 2954,
         "station": {
           "Address": {
-            "Zip": "22180",
             "Street": "2700 Gallows Road",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22180",
+            "State": "VA"
           },
           "Code": "K07",
           "Lat": 38.883015,
@@ -14221,8 +14221,8 @@
       {
         "circuit": 2960,
         "location": {
-          "lat": 38.88653799999999,
-          "lng": -77.219712
+          "lat": 38.887650999999984,
+          "lng": -77.217094
         }
       },
       {
@@ -14235,8 +14235,8 @@
       {
         "circuit": 2962,
         "location": {
-          "lat": 38.890268000000006,
-          "lng": -77.211871
+          "lat": 38.88885799999997,
+          "lng": -77.21437399999999
         }
       },
       {
@@ -14326,10 +14326,10 @@
         "circuit": 2976,
         "station": {
           "Address": {
-            "Zip": "22043",
             "Street": "7040 Haycock Road",
-            "State": "VA",
-            "City": "Falls Church"
+            "City": "Falls Church",
+            "Zip": "22043",
+            "State": "VA"
           },
           "Code": "K06",
           "Lat": 38.90067,
@@ -14499,10 +14499,10 @@
         "circuit": 3001,
         "station": {
           "Address": {
-            "Zip": "22205",
             "Street": "2001 N. Sycamore St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22205",
+            "State": "VA"
           },
           "Code": "K05",
           "Lat": 38.885841,
@@ -14663,10 +14663,10 @@
         "circuit": 3023,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "4230 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K04",
           "Lat": 38.882071,
@@ -14775,10 +14775,10 @@
         "circuit": 3037,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3600 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K03",
           "Lat": 38.88331,
@@ -14820,8 +14820,8 @@
       {
         "circuit": 3041,
         "location": {
-          "lat": 38.88391599999997,
-          "lng": -77.101898
+          "lat": 38.88432399999999,
+          "lng": -77.10090199999998
         }
       },
       {
@@ -14870,10 +14870,10 @@
         "circuit": 3048,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K02",
           "Lat": 38.886373,
@@ -14971,10 +14971,10 @@
         "circuit": 3061,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "2100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K01",
           "Lat": 38.891499,
@@ -15016,8 +15016,8 @@
       {
         "circuit": 3065,
         "location": {
-          "lat": 38.89129799999998,
-          "lng": -77.084267
+          "lat": 38.890955,
+          "lng": -77.085295
         }
       },
       {
@@ -15111,10 +15111,10 @@
         "circuit": 1285,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -15220,10 +15220,10 @@
         "circuit": 1298,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -15314,10 +15314,10 @@
         "circuit": 1310,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -15411,10 +15411,10 @@
         "circuit": 1323,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -15478,10 +15478,10 @@
         "circuit": 1330,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -15538,10 +15538,10 @@
         "circuit": 1549,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -15622,10 +15622,10 @@
         "circuit": 1559,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -15703,10 +15703,10 @@
         "circuit": 1568,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -15770,10 +15770,10 @@
         "circuit": 1575,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -15885,10 +15885,10 @@
         "circuit": 1590,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -15959,10 +15959,10 @@
         "circuit": 1598,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -16053,10 +16053,10 @@
         "circuit": 1610,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -16127,10 +16127,10 @@
         "circuit": 1618,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -16316,10 +16316,10 @@
         "circuit": 1643,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4000 Minnesota Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "D09",
           "Lat": 38.898284,
@@ -16432,10 +16432,10 @@
         "circuit": 1657,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4720 Minnesota Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "D10",
           "Lat": 38.907734,
@@ -16541,10 +16541,10 @@
         "circuit": 1670,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "5501 Columbia Park",
-            "State": "MD",
-            "City": "Cheverly"
+            "City": "Cheverly",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "D11",
           "Lat": 38.91652,
@@ -16705,10 +16705,10 @@
         "circuit": 1692,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "3000 Pennsy Drive",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "D12",
           "Lat": 38.934411,
@@ -16852,10 +16852,10 @@
         "circuit": 1711,
         "station": {
           "Address": {
-            "Zip": "20784",
             "Street": "4700 Garden City Drive",
-            "State": "MD",
-            "City": "New Carrollton"
+            "City": "New Carrollton",
+            "Zip": "20784",
+            "State": "MD"
           },
           "Code": "D13",
           "Lat": 38.947674,
@@ -16897,10 +16897,10 @@
         "circuit": 7,
         "station": {
           "Address": {
-            "Zip": "20855",
             "Street": "15903 Somerville Drive",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20855",
+            "State": "MD"
           },
           "Code": "A15",
           "Lat": 39.119819,
@@ -17086,10 +17086,10 @@
         "circuit": 32,
         "station": {
           "Address": {
-            "Zip": "20850",
             "Street": "251 Hungerford Drive",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20850",
+            "State": "MD"
           },
           "Code": "A14",
           "Lat": 39.084215,
@@ -17243,10 +17243,10 @@
         "circuit": 53,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "1600 Chapman Avenue",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A13",
           "Lat": 39.062359,
@@ -17324,10 +17324,10 @@
         "circuit": 62,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "5500 Marinelli Road",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A12",
           "Lat": 39.048043,
@@ -17464,10 +17464,10 @@
         "circuit": 80,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "10300 Rockville Pike",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A11",
           "Lat": 39.029158,
@@ -17587,10 +17587,10 @@
         "circuit": 95,
         "station": {
           "Address": {
-            "Zip": "20814",
             "Street": "8810 Rockville Pike",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20814",
+            "State": "MD"
           },
           "Code": "A10",
           "Lat": 38.999947,
@@ -17695,10 +17695,10 @@
         "circuit": 109,
         "station": {
           "Address": {
-            "Zip": "20814",
             "Street": "7450 Wisconsin Avenue",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20814",
+            "State": "MD"
           },
           "Code": "A09",
           "Lat": 38.984282,
@@ -17761,8 +17761,8 @@
       {
         "circuit": 116,
         "location": {
-          "lat": 38.966565999999986,
-          "lng": -77.088513
+          "lat": 38.96919599999999,
+          "lng": -77.089062
         }
       },
       {
@@ -17824,10 +17824,10 @@
         "circuit": 126,
         "station": {
           "Address": {
-            "Zip": "20015",
             "Street": "5337 Wisconsin Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20015",
+            "State": "DC"
           },
           "Code": "A08",
           "Lat": 38.960744,
@@ -17891,10 +17891,10 @@
         "circuit": 133,
         "station": {
           "Address": {
-            "Zip": "20016",
             "Street": "4501 Wisconsin Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20016",
+            "State": "DC"
           },
           "Code": "A07",
           "Lat": 38.947808,
@@ -17972,10 +17972,10 @@
         "circuit": 142,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "4200 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A06",
           "Lat": 38.94362,
@@ -18066,10 +18066,10 @@
         "circuit": 154,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "3599 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A05",
           "Lat": 38.934703,
@@ -18154,10 +18154,10 @@
         "circuit": 164,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "2700 Connecticut Ave., NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A04",
           "Lat": 38.924999,
@@ -18269,10 +18269,10 @@
         "circuit": 179,
         "station": {
           "Address": {
-            "Zip": "20036",
             "Street": "1525 20th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20036",
+            "State": "DC"
           },
           "Code": "A03",
           "Lat": 38.909499,
@@ -18356,10 +18356,10 @@
         "circuit": 190,
         "station": {
           "Address": {
-            "Zip": "20036",
             "Street": "1001 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20036",
+            "State": "DC"
           },
           "Code": "A02",
           "Lat": 38.903192,
@@ -18465,10 +18465,10 @@
         "circuit": 203,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "A01",
           "Lat": 38.898303,
@@ -18525,10 +18525,10 @@
         "circuit": 467,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "B01",
           "Lat": 38.89834,
@@ -18601,10 +18601,10 @@
         "circuit": 477,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "450 F Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "B02",
           "Lat": 38.896084,
@@ -18632,8 +18632,8 @@
       {
         "circuit": 479,
         "location": {
-          "lat": 38.89483999999999,
-          "lng": -77.01431099999999
+          "lat": 38.89477499999998,
+          "lng": -77.01310799999999
         }
       },
       {
@@ -18675,10 +18675,10 @@
         "circuit": 485,
         "station": {
           "Address": {
-            "Zip": "20002",
             "Street": "701 First St. NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20002",
+            "State": "DC"
           },
           "Code": "B03",
           "Lat": 38.897723,
@@ -18762,10 +18762,10 @@
         "circuit": 496,
         "station": {
           "Address": {
-            "Zip": "20002",
             "Street": "200 Florida Ave N.E.",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20002",
+            "State": "DC"
           },
           "Code": "B35",
           "Lat": 38.907407,
@@ -18817,8 +18817,8 @@
       {
         "circuit": 502,
         "location": {
-          "lat": 38.91145299999999,
-          "lng": -77.00033599999998
+          "lat": 38.912082,
+          "lng": -76.999676
         }
       },
       {
@@ -18887,10 +18887,10 @@
         "circuit": 513,
         "station": {
           "Address": {
-            "Zip": "20018",
             "Street": "919 Rhode Island Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20018",
+            "State": "DC"
           },
           "Code": "B04",
           "Lat": 38.920741,
@@ -18991,10 +18991,10 @@
         "circuit": 527,
         "station": {
           "Address": {
-            "Zip": "20017",
             "Street": "801 Michigan Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20017",
+            "State": "DC"
           },
           "Code": "B05",
           "Lat": 38.933234,
@@ -19144,10 +19144,10 @@
         "circuit": 548,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "B06",
           "Lat": 38.951777,
@@ -19315,10 +19315,10 @@
         "circuit": 571,
         "station": {
           "Address": {
-            "Zip": "20012",
             "Street": "327 Cedar Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20012",
+            "State": "DC"
           },
           "Code": "B07",
           "Lat": 38.975532,
@@ -19465,10 +19465,10 @@
         "circuit": 591,
         "station": {
           "Address": {
-            "Zip": "20910",
             "Street": "8400 Colesville Road",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20910",
+            "State": "MD"
           },
           "Code": "B08",
           "Lat": 38.993841,
@@ -19623,10 +19623,10 @@
         "circuit": 611,
         "station": {
           "Address": {
-            "Zip": "20910",
             "Street": "9730 Georgia Avenue",
-            "State": "MD",
-            "City": "Forest Glen"
+            "City": "Forest Glen",
+            "Zip": "20910",
+            "State": "MD"
           },
           "Code": "B09",
           "Lat": 39.015413,
@@ -19759,10 +19759,10 @@
         "circuit": 629,
         "station": {
           "Address": {
-            "Zip": "20902",
             "Street": "11171 Georgia Avenue",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20902",
+            "State": "MD"
           },
           "Code": "B10",
           "Lat": 39.038558,
@@ -19866,8 +19866,8 @@
       {
         "circuit": 643,
         "location": {
-          "lat": 39.055134,
-          "lng": -77.05019799999998
+          "lat": 39.05717699999999,
+          "lng": -77.049738
         }
       },
       {
@@ -19926,10 +19926,10 @@
         "circuit": 652,
         "station": {
           "Address": {
-            "Zip": "20906",
             "Street": "12501 Georgia Avenue",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20906",
+            "State": "MD"
           },
           "Code": "B11",
           "Lat": 39.061713,
@@ -19971,10 +19971,10 @@
         "circuit": 210,
         "station": {
           "Address": {
-            "Zip": "20855",
             "Street": "15903 Somerville Drive",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20855",
+            "State": "MD"
           },
           "Code": "A15",
           "Lat": 39.119819,
@@ -20139,10 +20139,10 @@
         "circuit": 232,
         "station": {
           "Address": {
-            "Zip": "20850",
             "Street": "251 Hungerford Drive",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20850",
+            "State": "MD"
           },
           "Code": "A14",
           "Lat": 39.084215,
@@ -20282,10 +20282,10 @@
         "circuit": 251,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "1600 Chapman Avenue",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A13",
           "Lat": 39.062359,
@@ -20363,10 +20363,10 @@
         "circuit": 260,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "5500 Marinelli Road",
-            "State": "MD",
-            "City": "Rockville"
+            "City": "Rockville",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A12",
           "Lat": 39.048043,
@@ -20503,10 +20503,10 @@
         "circuit": 278,
         "station": {
           "Address": {
-            "Zip": "20852",
             "Street": "10300 Rockville Pike",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20852",
+            "State": "MD"
           },
           "Code": "A11",
           "Lat": 39.029158,
@@ -20633,10 +20633,10 @@
         "circuit": 294,
         "station": {
           "Address": {
-            "Zip": "20814",
             "Street": "8810 Rockville Pike",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20814",
+            "State": "MD"
           },
           "Code": "A10",
           "Lat": 38.999947,
@@ -20748,10 +20748,10 @@
         "circuit": 309,
         "station": {
           "Address": {
-            "Zip": "20814",
             "Street": "7450 Wisconsin Avenue",
-            "State": "MD",
-            "City": "Bethesda"
+            "City": "Bethesda",
+            "Zip": "20814",
+            "State": "MD"
           },
           "Code": "A09",
           "Lat": 38.984282,
@@ -20877,10 +20877,10 @@
         "circuit": 326,
         "station": {
           "Address": {
-            "Zip": "20015",
             "Street": "5337 Wisconsin Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20015",
+            "State": "DC"
           },
           "Code": "A08",
           "Lat": 38.960744,
@@ -20965,10 +20965,10 @@
         "circuit": 336,
         "station": {
           "Address": {
-            "Zip": "20016",
             "Street": "4501 Wisconsin Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20016",
+            "State": "DC"
           },
           "Code": "A07",
           "Lat": 38.947808,
@@ -21053,10 +21053,10 @@
         "circuit": 346,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "4200 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A06",
           "Lat": 38.94362,
@@ -21133,10 +21133,10 @@
         "circuit": 356,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "3599 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A05",
           "Lat": 38.934703,
@@ -21164,8 +21164,8 @@
       {
         "circuit": 358,
         "location": {
-          "lat": 38.93379599999999,
-          "lng": -77.057408
+          "lat": 38.932776,
+          "lng": -77.056815
         }
       },
       {
@@ -21200,10 +21200,10 @@
         "circuit": 363,
         "station": {
           "Address": {
-            "Zip": "20008",
             "Street": "2700 Connecticut Ave., NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20008",
+            "State": "DC"
           },
           "Code": "A04",
           "Lat": 38.924999,
@@ -21315,10 +21315,10 @@
         "circuit": 378,
         "station": {
           "Address": {
-            "Zip": "20036",
             "Street": "1525 20th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20036",
+            "State": "DC"
           },
           "Code": "A03",
           "Lat": 38.909499,
@@ -21402,10 +21402,10 @@
         "circuit": 389,
         "station": {
           "Address": {
-            "Zip": "20036",
             "Street": "1001 Connecticut Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20036",
+            "State": "DC"
           },
           "Code": "A02",
           "Lat": 38.903192,
@@ -21500,10 +21500,10 @@
         "circuit": 661,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "A01",
           "Lat": 38.898303,
@@ -21560,10 +21560,10 @@
         "circuit": 667,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "B01",
           "Lat": 38.89834,
@@ -21636,10 +21636,10 @@
         "circuit": 677,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "450 F Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "B02",
           "Lat": 38.896084,
@@ -21660,8 +21660,8 @@
       {
         "circuit": 678,
         "location": {
-          "lat": 38.89623299999999,
-          "lng": -77.016787
+          "lat": 38.895317999999975,
+          "lng": -77.01547399999998
         }
       },
       {
@@ -21717,10 +21717,10 @@
         "circuit": 686,
         "station": {
           "Address": {
-            "Zip": "20002",
             "Street": "701 First St. NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20002",
+            "State": "DC"
           },
           "Code": "B03",
           "Lat": 38.897723,
@@ -21825,10 +21825,10 @@
         "circuit": 700,
         "station": {
           "Address": {
-            "Zip": "20002",
             "Street": "200 Florida Ave N.E.",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20002",
+            "State": "DC"
           },
           "Code": "B35",
           "Lat": 38.907407,
@@ -21911,8 +21911,8 @@
       {
         "circuit": 711,
         "location": {
-          "lat": 38.91399499999998,
-          "lng": -76.99973899999999
+          "lat": 38.913338999999986,
+          "lng": -77.00006899999998
         }
       },
       {
@@ -21950,10 +21950,10 @@
         "circuit": 717,
         "station": {
           "Address": {
-            "Zip": "20018",
             "Street": "919 Rhode Island Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20018",
+            "State": "DC"
           },
           "Code": "B04",
           "Lat": 38.920741,
@@ -21981,8 +21981,8 @@
       {
         "circuit": 719,
         "location": {
-          "lat": 38.922171999999996,
-          "lng": -76.995498
+          "lat": 38.92302299999998,
+          "lng": -76.99514599999999
         }
       },
       {
@@ -22054,10 +22054,10 @@
         "circuit": 731,
         "station": {
           "Address": {
-            "Zip": "20017",
             "Street": "801 Michigan Avenue NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20017",
+            "State": "DC"
           },
           "Code": "B05",
           "Lat": 38.933234,
@@ -22141,8 +22141,8 @@
       {
         "circuit": 741,
         "location": {
-          "lat": 38.940492,
-          "lng": -76.99747199999999
+          "lat": 38.939615999999994,
+          "lng": -76.99710899999998
         }
       },
       {
@@ -22242,10 +22242,10 @@
         "circuit": 757,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "B06",
           "Lat": 38.951777,
@@ -22357,8 +22357,8 @@
       {
         "circuit": 771,
         "location": {
-          "lat": 38.96320099999999,
-          "lng": -77.00873299999999
+          "lat": 38.964670999999974,
+          "lng": -77.01046799999999
         }
       },
       {
@@ -22448,10 +22448,10 @@
         "circuit": 785,
         "station": {
           "Address": {
-            "Zip": "20012",
             "Street": "327 Cedar Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20012",
+            "State": "DC"
           },
           "Code": "B07",
           "Lat": 38.975532,
@@ -22570,8 +22570,8 @@
       {
         "circuit": 800,
         "location": {
-          "lat": 38.990294000000006,
-          "lng": -77.027599
+          "lat": 38.988602999999976,
+          "lng": -77.026026
         }
       },
       {
@@ -22630,10 +22630,10 @@
         "circuit": 809,
         "station": {
           "Address": {
-            "Zip": "20910",
             "Street": "8400 Colesville Road",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20910",
+            "State": "MD"
           },
           "Code": "B08",
           "Lat": 38.993841,
@@ -22773,10 +22773,10 @@
         "circuit": 828,
         "station": {
           "Address": {
-            "Zip": "20910",
             "Street": "9730 Georgia Avenue",
-            "State": "MD",
-            "City": "Forest Glen"
+            "City": "Forest Glen",
+            "Zip": "20910",
+            "State": "MD"
           },
           "Code": "B09",
           "Lat": 39.015413,
@@ -22909,10 +22909,10 @@
         "circuit": 846,
         "station": {
           "Address": {
-            "Zip": "20902",
             "Street": "11171 Georgia Avenue",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20902",
+            "State": "MD"
           },
           "Code": "B10",
           "Lat": 39.038558,
@@ -23069,10 +23069,10 @@
         "circuit": 868,
         "station": {
           "Address": {
-            "Zip": "20906",
             "Street": "12501 Georgia Avenue",
-            "State": "MD",
-            "City": "Silver Spring"
+            "City": "Silver Spring",
+            "Zip": "20906",
+            "State": "MD"
           },
           "Code": "B11",
           "Lat": 39.061713,
@@ -23114,10 +23114,10 @@
         "circuit": 3155,
         "station": {
           "Address": {
-            "Zip": "20190",
             "Street": "1862 Wiehle Avenue",
-            "State": "VA",
-            "City": "Reston"
+            "City": "Reston",
+            "Zip": "20190",
+            "State": "VA"
           },
           "Code": "N06",
           "Lat": 38.947753,
@@ -23228,8 +23228,8 @@
       {
         "circuit": 3170,
         "location": {
-          "lat": 38.947188999999995,
-          "lng": -77.314264
+          "lat": 38.94742599999998,
+          "lng": -77.313484
         }
       },
       {
@@ -23249,8 +23249,8 @@
       {
         "circuit": 3173,
         "location": {
-          "lat": 38.948181,
-          "lng": -77.307259
+          "lat": 38.94803799999999,
+          "lng": -77.310079
         }
       },
       {
@@ -23416,8 +23416,8 @@
       {
         "circuit": 3198,
         "location": {
-          "lat": 38.933197999999976,
-          "lng": -77.26252199999999
+          "lat": 38.932463,
+          "lng": -77.259784
         }
       },
       {
@@ -23521,10 +23521,10 @@
         "circuit": 3214,
         "station": {
           "Address": {
-            "Zip": "22182",
             "Street": "1576 Spring Hill Road",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22182",
+            "State": "VA"
           },
           "Code": "N04",
           "Lat": 38.929273,
@@ -23588,10 +23588,10 @@
         "circuit": 3221,
         "station": {
           "Address": {
-            "Zip": "22182",
             "Street": "8305 Leesburg Pike",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22182",
+            "State": "VA"
           },
           "Code": "N03",
           "Lat": 38.919749,
@@ -23675,10 +23675,10 @@
         "circuit": 3232,
         "station": {
           "Address": {
-            "Zip": "22102",
             "Street": "1943 Chain Bridge Road",
-            "State": "VA",
-            "City": "McLean"
+            "City": "McLean",
+            "Zip": "22102",
+            "State": "VA"
           },
           "Code": "N02",
           "Lat": 38.920056,
@@ -23735,10 +23735,10 @@
         "circuit": 3238,
         "station": {
           "Address": {
-            "Zip": "22102",
             "Street": "1824 Dolley Madison Boulevard",
-            "State": "VA",
-            "City": "McLean"
+            "City": "McLean",
+            "Zip": "22102",
+            "State": "VA"
           },
           "Code": "N01",
           "Lat": 38.924478,
@@ -24120,10 +24120,10 @@
         "circuit": 2844,
         "station": {
           "Address": {
-            "Zip": "22205",
             "Street": "2001 N. Sycamore St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22205",
+            "State": "VA"
           },
           "Code": "K05",
           "Lat": 38.885841,
@@ -24312,10 +24312,10 @@
         "circuit": 2870,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "4230 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K04",
           "Lat": 38.882071,
@@ -24438,10 +24438,10 @@
         "circuit": 2886,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3600 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K03",
           "Lat": 38.88331,
@@ -24518,8 +24518,8 @@
       {
         "circuit": 2895,
         "location": {
-          "lat": 38.88672299999999,
-          "lng": -77.09542899999998
+          "lat": 38.88615799999999,
+          "lng": -77.096615
         }
       },
       {
@@ -24540,10 +24540,10 @@
         "circuit": 2898,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K02",
           "Lat": 38.886373,
@@ -24641,10 +24641,10 @@
         "circuit": 2911,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "2100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K01",
           "Lat": 38.891499,
@@ -24788,10 +24788,10 @@
         "circuit": 1092,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -24897,10 +24897,10 @@
         "circuit": 1105,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -24991,10 +24991,10 @@
         "circuit": 1117,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -25064,10 +25064,10 @@
         "circuit": 1126,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -25145,10 +25145,10 @@
         "circuit": 1135,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -25212,10 +25212,10 @@
         "circuit": 1384,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -25289,10 +25289,10 @@
         "circuit": 1393,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -25356,10 +25356,10 @@
         "circuit": 1400,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -25416,10 +25416,10 @@
         "circuit": 1406,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -25510,10 +25510,10 @@
         "circuit": 1418,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -25570,10 +25570,10 @@
         "circuit": 1424,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -25664,10 +25664,10 @@
         "circuit": 1436,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -25731,10 +25731,10 @@
         "circuit": 1443,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -25951,10 +25951,10 @@
         "circuit": 2420,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4500 Benning Road",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "G01",
           "Lat": 38.890488,
@@ -26067,10 +26067,10 @@
         "circuit": 2434,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "133 Central Avenue",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G02",
           "Lat": 38.889757,
@@ -26182,10 +26182,10 @@
         "circuit": 2449,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "100 Addison Road S.",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G03",
           "Lat": 38.886713,
@@ -26262,8 +26262,8 @@
       {
         "circuit": 2458,
         "location": {
-          "lat": 38.89124799999998,
-          "lng": -76.87459999999999
+          "lat": 38.89051200000001,
+          "lng": -76.87648599999999
         }
       },
       {
@@ -26332,10 +26332,10 @@
         "circuit": 2469,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "300 Garrett Morgan Blvd.",
-            "State": "MD",
-            "City": "Landover"
+            "City": "Landover",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "G04",
           "Lat": 38.8913,
@@ -26384,8 +26384,8 @@
       {
         "circuit": 2474,
         "location": {
-          "lat": 38.895899,
-          "lng": -76.859831
+          "lat": 38.89611599999999,
+          "lng": -76.857017
         }
       },
       {
@@ -26472,10 +26472,10 @@
         "circuit": 2487,
         "station": {
           "Address": {
-            "Zip": "20774",
             "Street": "Largo Town Center 9000 Lottsford Road",
-            "State": "MD",
-            "City": "Largo"
+            "City": "Largo",
+            "Zip": "20774",
+            "State": "MD"
           },
           "Code": "G05",
           "Lat": 38.9008,
@@ -26517,10 +26517,10 @@
         "circuit": 3290,
         "station": {
           "Address": {
-            "Zip": "20190",
             "Street": "1862 Wiehle Avenue",
-            "State": "VA",
-            "City": "Reston"
+            "City": "Reston",
+            "Zip": "20190",
+            "State": "VA"
           },
           "Code": "N06",
           "Lat": 38.947753,
@@ -26945,10 +26945,10 @@
         "circuit": 3352,
         "station": {
           "Address": {
-            "Zip": "22182",
             "Street": "1576 Spring Hill Road",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22182",
+            "State": "VA"
           },
           "Code": "N04",
           "Lat": 38.929273,
@@ -27012,10 +27012,10 @@
         "circuit": 3359,
         "station": {
           "Address": {
-            "Zip": "22182",
             "Street": "8305 Leesburg Pike",
-            "State": "VA",
-            "City": "Vienna"
+            "City": "Vienna",
+            "Zip": "22182",
+            "State": "VA"
           },
           "Code": "N03",
           "Lat": 38.919749,
@@ -27099,10 +27099,10 @@
         "circuit": 3370,
         "station": {
           "Address": {
-            "Zip": "22102",
             "Street": "1943 Chain Bridge Road",
-            "State": "VA",
-            "City": "McLean"
+            "City": "McLean",
+            "Zip": "22102",
+            "State": "VA"
           },
           "Code": "N02",
           "Lat": 38.920056,
@@ -27166,10 +27166,10 @@
         "circuit": 3377,
         "station": {
           "Address": {
-            "Zip": "22102",
             "Street": "1824 Dolley Madison Boulevard",
-            "State": "VA",
-            "City": "McLean"
+            "City": "McLean",
+            "Zip": "22102",
+            "State": "VA"
           },
           "Code": "N01",
           "Lat": 38.924478,
@@ -27551,10 +27551,10 @@
         "circuit": 3001,
         "station": {
           "Address": {
-            "Zip": "22205",
             "Street": "2001 N. Sycamore St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22205",
+            "State": "VA"
           },
           "Code": "K05",
           "Lat": 38.885841,
@@ -27715,10 +27715,10 @@
         "circuit": 3023,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "4230 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K04",
           "Lat": 38.882071,
@@ -27827,10 +27827,10 @@
         "circuit": 3037,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3600 Fairfax Drive",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K03",
           "Lat": 38.88331,
@@ -27872,8 +27872,8 @@
       {
         "circuit": 3041,
         "location": {
-          "lat": 38.88391599999997,
-          "lng": -77.101898
+          "lat": 38.88432399999999,
+          "lng": -77.10090199999998
         }
       },
       {
@@ -27922,10 +27922,10 @@
         "circuit": 3048,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "3100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K02",
           "Lat": 38.886373,
@@ -28023,10 +28023,10 @@
         "circuit": 3061,
         "station": {
           "Address": {
-            "Zip": "22201",
             "Street": "2100 Wilson Blvd",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22201",
+            "State": "VA"
           },
           "Code": "K01",
           "Lat": 38.891499,
@@ -28068,8 +28068,8 @@
       {
         "circuit": 3065,
         "location": {
-          "lat": 38.89129799999998,
-          "lng": -77.084267
+          "lat": 38.890955,
+          "lng": -77.085295
         }
       },
       {
@@ -28163,10 +28163,10 @@
         "circuit": 1285,
         "station": {
           "Address": {
-            "Zip": "22209",
             "Street": "1850 N. Moore Street",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22209",
+            "State": "VA"
           },
           "Code": "C05",
           "Lat": 38.896595,
@@ -28272,10 +28272,10 @@
         "circuit": 1298,
         "station": {
           "Address": {
-            "Zip": "20037",
             "Street": "2301 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20037",
+            "State": "DC"
           },
           "Code": "C04",
           "Lat": 38.900599,
@@ -28366,10 +28366,10 @@
         "circuit": 1310,
         "station": {
           "Address": {
-            "Zip": "20006",
             "Street": "900 18th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20006",
+            "State": "DC"
           },
           "Code": "C03",
           "Lat": 38.901311,
@@ -28463,10 +28463,10 @@
         "circuit": 1323,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "1400 I St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C02",
           "Lat": 38.901316,
@@ -28530,10 +28530,10 @@
         "circuit": 1330,
         "station": {
           "Address": {
-            "Zip": "20005",
             "Street": "607 13th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20005",
+            "State": "DC"
           },
           "Code": "C01",
           "Lat": 38.898303,
@@ -28590,10 +28590,10 @@
         "circuit": 1549,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "302 12th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D01",
           "Lat": 38.893757,
@@ -28674,10 +28674,10 @@
         "circuit": 1559,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "1200 Independence Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "D02",
           "Lat": 38.888022,
@@ -28755,10 +28755,10 @@
         "circuit": 1568,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D03",
           "Lat": 38.884775,
@@ -28822,10 +28822,10 @@
         "circuit": 1575,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "401 3rd Street SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "D04",
           "Lat": 38.884958,
@@ -28937,10 +28937,10 @@
         "circuit": 1590,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "355 First Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D05",
           "Lat": 38.884968,
@@ -29011,10 +29011,10 @@
         "circuit": 1598,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "701 Pennsylvania Avenue SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D06",
           "Lat": 38.884124,
@@ -29105,10 +29105,10 @@
         "circuit": 1610,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "700 14th Street SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D07",
           "Lat": 38.880841,
@@ -29179,10 +29179,10 @@
         "circuit": 1618,
         "station": {
           "Address": {
-            "Zip": "20003",
             "Street": "192 19th St. SE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20003",
+            "State": "DC"
           },
           "Code": "D08",
           "Lat": 38.88594,
@@ -29396,10 +29396,10 @@
         "circuit": 2506,
         "station": {
           "Address": {
-            "Zip": "20019",
             "Street": "4500 Benning Road",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20019",
+            "State": "DC"
           },
           "Code": "G01",
           "Lat": 38.890488,
@@ -29519,10 +29519,10 @@
         "circuit": 2521,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "133 Central Avenue",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G02",
           "Lat": 38.889757,
@@ -29641,10 +29641,10 @@
         "circuit": 2537,
         "station": {
           "Address": {
-            "Zip": "20743",
             "Street": "100 Addison Road S.",
-            "State": "MD",
-            "City": "Capitol Heights"
+            "City": "Capitol Heights",
+            "Zip": "20743",
+            "State": "MD"
           },
           "Code": "G03",
           "Lat": 38.886713,
@@ -29791,10 +29791,10 @@
         "circuit": 2557,
         "station": {
           "Address": {
-            "Zip": "20785",
             "Street": "300 Garrett Morgan Blvd.",
-            "State": "MD",
-            "City": "Landover"
+            "City": "Landover",
+            "Zip": "20785",
+            "State": "MD"
           },
           "Code": "G04",
           "Lat": 38.8913,
@@ -29928,10 +29928,10 @@
         "circuit": 2574,
         "station": {
           "Address": {
-            "Zip": "20774",
             "Street": "Largo Town Center 9000 Lottsford Road",
-            "State": "MD",
-            "City": "Largo"
+            "City": "Largo",
+            "Zip": "20774",
+            "State": "MD"
           },
           "Code": "G05",
           "Lat": 38.9008,
@@ -29973,10 +29973,10 @@
         "circuit": 944,
         "station": {
           "Address": {
-            "Zip": "22303",
             "Street": "2501 Huntington Ave",
-            "State": "VA",
-            "City": "Huntington"
+            "City": "Huntington",
+            "Zip": "22303",
+            "State": "VA"
           },
           "Code": "C15",
           "Lat": 38.793841,
@@ -30064,10 +30064,10 @@
         "circuit": 955,
         "station": {
           "Address": {
-            "Zip": "22314",
             "Street": "2400 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22314",
+            "State": "VA"
           },
           "Code": "C14",
           "Lat": 38.800313,
@@ -30172,10 +30172,10 @@
         "circuit": 969,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -30239,10 +30239,10 @@
         "circuit": 976,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -30487,10 +30487,10 @@
         "circuit": 1010,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -30599,10 +30599,10 @@
         "circuit": 1024,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -30701,10 +30701,10 @@
         "circuit": 1036,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -30823,10 +30823,10 @@
         "circuit": 1052,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -31001,10 +31001,10 @@
         "circuit": 2231,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -31081,10 +31081,10 @@
         "circuit": 2241,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -31134,10 +31134,10 @@
         "circuit": 2246,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -31218,10 +31218,10 @@
         "circuit": 1753,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -31309,10 +31309,10 @@
         "circuit": 1764,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -31382,10 +31382,10 @@
         "circuit": 1773,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -31463,10 +31463,10 @@
         "circuit": 1782,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -31529,8 +31529,8 @@
       {
         "circuit": 1789,
         "location": {
-          "lat": 38.93499899999997,
-          "lng": -77.025222
+          "lat": 38.93417099999999,
+          "lng": -77.025836
         }
       },
       {
@@ -31571,10 +31571,10 @@
         "circuit": 1796,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -31623,8 +31623,8 @@
       {
         "circuit": 1801,
         "location": {
-          "lat": 38.94584599999997,
-          "lng": -77.017163
+          "lat": 38.947319,
+          "lng": -77.01582299999998
         }
       },
       {
@@ -31680,10 +31680,10 @@
         "circuit": 1809,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -31725,10 +31725,10 @@
         "circuit": 1137,
         "station": {
           "Address": {
-            "Zip": "22303",
             "Street": "2501 Huntington Ave",
-            "State": "VA",
-            "City": "Huntington"
+            "City": "Huntington",
+            "Zip": "22303",
+            "State": "VA"
           },
           "Code": "C15",
           "Lat": 38.793841,
@@ -31816,10 +31816,10 @@
         "circuit": 1148,
         "station": {
           "Address": {
-            "Zip": "22314",
             "Street": "2400 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22314",
+            "State": "VA"
           },
           "Code": "C14",
           "Lat": 38.800313,
@@ -31928,10 +31928,10 @@
         "circuit": 1162,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -32002,10 +32002,10 @@
         "circuit": 1170,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -32254,10 +32254,10 @@
         "circuit": 1204,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -32302,8 +32302,8 @@
       {
         "circuit": 1209,
         "location": {
-          "lat": 38.85524799999999,
-          "lng": -77.04486799999998
+          "lat": 38.854577,
+          "lng": -77.04459299999999
         }
       },
       {
@@ -32359,10 +32359,10 @@
         "circuit": 1217,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -32468,10 +32468,10 @@
         "circuit": 1230,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -32590,10 +32590,10 @@
         "circuit": 1246,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -32631,8 +32631,8 @@
       {
         "circuit": 3125,
         "location": {
-          "lat": 38.86923499999999,
-          "lng": -77.054163
+          "lat": 38.87005599999997,
+          "lng": -77.05308
         }
       },
       {
@@ -32789,10 +32789,10 @@
         "circuit": 2364,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -32830,8 +32830,8 @@
       {
         "circuit": 2368,
         "location": {
-          "lat": 38.886226,
-          "lng": -77.021939
+          "lat": 38.885122999999986,
+          "lng": -77.02193799999999
         }
       },
       {
@@ -32883,10 +32883,10 @@
         "circuit": 2376,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -32921,8 +32921,8 @@
       {
         "circuit": 2379,
         "location": {
-          "lat": 38.895013999999996,
-          "lng": -77.021973
+          "lat": 38.89618100000001,
+          "lng": -77.021974
         }
       },
       {
@@ -32936,10 +32936,10 @@
         "circuit": 1899,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -33030,10 +33030,10 @@
         "circuit": 1911,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -33124,10 +33124,10 @@
         "circuit": 1923,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -33197,10 +33197,10 @@
         "circuit": 1932,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -33285,10 +33285,10 @@
         "circuit": 1942,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -33393,10 +33393,10 @@
         "circuit": 1956,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -33516,10 +33516,10 @@
         "circuit": 1971,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -33561,10 +33561,10 @@
         "circuit": 2604,
         "station": {
           "Address": {
-            "Zip": "22150",
             "Street": "6880 Frontier Drive",
-            "State": "VA",
-            "City": "Springfield"
+            "City": "Springfield",
+            "Zip": "22150",
+            "State": "VA"
           },
           "Code": "J03",
           "Lat": 38.766129,
@@ -33749,8 +33749,8 @@
       {
         "circuit": 2629,
         "location": {
-          "lat": 38.79788499999997,
-          "lng": -77.13905299999999
+          "lat": 38.798187999999975,
+          "lng": -77.136735
         }
       },
       {
@@ -33785,10 +33785,10 @@
         "circuit": 2634,
         "station": {
           "Address": {
-            "Zip": "22310",
             "Street": "5690 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22310",
+            "State": "VA"
           },
           "Code": "J02",
           "Lat": 38.799193,
@@ -34084,10 +34084,10 @@
         "circuit": 969,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -34151,10 +34151,10 @@
         "circuit": 976,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -34399,10 +34399,10 @@
         "circuit": 1010,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -34511,10 +34511,10 @@
         "circuit": 1024,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -34613,10 +34613,10 @@
         "circuit": 1036,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -34735,10 +34735,10 @@
         "circuit": 1052,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -34913,10 +34913,10 @@
         "circuit": 2231,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -34993,10 +34993,10 @@
         "circuit": 2241,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -35046,10 +35046,10 @@
         "circuit": 2246,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -35130,10 +35130,10 @@
         "circuit": 1753,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -35221,10 +35221,10 @@
         "circuit": 1764,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -35294,10 +35294,10 @@
         "circuit": 1773,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -35375,10 +35375,10 @@
         "circuit": 1782,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -35441,8 +35441,8 @@
       {
         "circuit": 1789,
         "location": {
-          "lat": 38.93499899999997,
-          "lng": -77.025222
+          "lat": 38.93417099999999,
+          "lng": -77.025836
         }
       },
       {
@@ -35483,10 +35483,10 @@
         "circuit": 1796,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -35535,8 +35535,8 @@
       {
         "circuit": 1801,
         "location": {
-          "lat": 38.94584599999997,
-          "lng": -77.017163
+          "lat": 38.947319,
+          "lng": -77.01582299999998
         }
       },
       {
@@ -35592,10 +35592,10 @@
         "circuit": 1809,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -35770,10 +35770,10 @@
         "circuit": 1833,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "2700 Hamilton St.",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E07",
           "Lat": 38.954931,
@@ -35899,10 +35899,10 @@
         "circuit": 1850,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "3575 East West Highway",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E08",
           "Lat": 38.965276,
@@ -36056,10 +36056,10 @@
         "circuit": 1871,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "4931 Calvert Road",
-            "State": "MD",
-            "City": "College Park"
+            "City": "College Park",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E09",
           "Lat": 38.978523,
@@ -36231,10 +36231,10 @@
         "circuit": 1894,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "5717 Greenbelt Metro Drive",
-            "State": "MD",
-            "City": "Greenbelt"
+            "City": "Greenbelt",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E10",
           "Lat": 39.011036,
@@ -36276,10 +36276,10 @@
         "circuit": 2679,
         "station": {
           "Address": {
-            "Zip": "22150",
             "Street": "6880 Frontier Drive",
-            "State": "VA",
-            "City": "Springfield"
+            "City": "Springfield",
+            "Zip": "22150",
+            "State": "VA"
           },
           "Code": "J03",
           "Lat": 38.766129,
@@ -36500,10 +36500,10 @@
         "circuit": 2709,
         "station": {
           "Address": {
-            "Zip": "22310",
             "Street": "5690 Eisenhower Avenue",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22310",
+            "State": "VA"
           },
           "Code": "J02",
           "Lat": 38.799193,
@@ -36831,10 +36831,10 @@
         "circuit": 1162,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "1900 King Street",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C13",
           "Lat": 38.806474,
@@ -36905,10 +36905,10 @@
         "circuit": 1170,
         "station": {
           "Address": {
-            "Zip": "22301",
             "Street": "700 N. West St.",
-            "State": "VA",
-            "City": "Alexandria"
+            "City": "Alexandria",
+            "Zip": "22301",
+            "State": "VA"
           },
           "Code": "C12",
           "Lat": 38.814009,
@@ -37157,10 +37157,10 @@
         "circuit": 1204,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2400 S. Smith Blvd.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C10",
           "Lat": 38.852985,
@@ -37205,8 +37205,8 @@
       {
         "circuit": 1209,
         "location": {
-          "lat": 38.85524799999999,
-          "lng": -77.04486799999998
+          "lat": 38.854577,
+          "lng": -77.04459299999999
         }
       },
       {
@@ -37262,10 +37262,10 @@
         "circuit": 1217,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1750 South Clark St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C09",
           "Lat": 38.85779,
@@ -37371,10 +37371,10 @@
         "circuit": 1230,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "1250 South Hayes St.",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C08",
           "Lat": 38.863045,
@@ -37493,10 +37493,10 @@
         "circuit": 1246,
         "station": {
           "Address": {
-            "Zip": "22202",
             "Street": "2 South Rotary Road",
-            "State": "VA",
-            "City": "Arlington"
+            "City": "Arlington",
+            "Zip": "22202",
+            "State": "VA"
           },
           "Code": "C07",
           "Lat": 38.869349,
@@ -37534,8 +37534,8 @@
       {
         "circuit": 3125,
         "location": {
-          "lat": 38.86923499999999,
-          "lng": -77.054163
+          "lat": 38.87005599999997,
+          "lng": -77.05308
         }
       },
       {
@@ -37692,10 +37692,10 @@
         "circuit": 2364,
         "station": {
           "Address": {
-            "Zip": "20024",
             "Street": "600 Maryland Avenue SW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20024",
+            "State": "DC"
           },
           "Code": "F03",
           "Lat": 38.884775,
@@ -37733,8 +37733,8 @@
       {
         "circuit": 2368,
         "location": {
-          "lat": 38.886226,
-          "lng": -77.021939
+          "lat": 38.885122999999986,
+          "lng": -77.02193799999999
         }
       },
       {
@@ -37786,10 +37786,10 @@
         "circuit": 2376,
         "station": {
           "Address": {
-            "Zip": "20004",
             "Street": "701 Pennsylvania Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20004",
+            "State": "DC"
           },
           "Code": "F02",
           "Lat": 38.893893,
@@ -37824,8 +37824,8 @@
       {
         "circuit": 2379,
         "location": {
-          "lat": 38.895013999999996,
-          "lng": -77.021973
+          "lat": 38.89618100000001,
+          "lng": -77.021974
         }
       },
       {
@@ -37839,10 +37839,10 @@
         "circuit": 1899,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "630 H St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "F01",
           "Lat": 38.89834,
@@ -37933,10 +37933,10 @@
         "circuit": 1911,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "700 M St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E01",
           "Lat": 38.905604,
@@ -38027,10 +38027,10 @@
         "circuit": 1923,
         "station": {
           "Address": {
-            "Zip": "20001",
             "Street": "1701 8th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20001",
+            "State": "DC"
           },
           "Code": "E02",
           "Lat": 38.912919,
@@ -38100,10 +38100,10 @@
         "circuit": 1932,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "1240 U Street NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E03",
           "Lat": 38.916489,
@@ -38188,10 +38188,10 @@
         "circuit": 1942,
         "station": {
           "Address": {
-            "Zip": "20009",
             "Street": "3030 14th St. NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20009",
+            "State": "DC"
           },
           "Code": "E04",
           "Lat": 38.928672,
@@ -38296,10 +38296,10 @@
         "circuit": 1956,
         "station": {
           "Address": {
-            "Zip": "20010",
             "Street": "3700 Georgia Avenue NW",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20010",
+            "State": "DC"
           },
           "Code": "E05",
           "Lat": 38.936077,
@@ -38419,10 +38419,10 @@
         "circuit": 1971,
         "station": {
           "Address": {
-            "Zip": "20011",
             "Street": "550 Galloway Street NE",
-            "State": "DC",
-            "City": "Washington"
+            "City": "Washington",
+            "Zip": "20011",
+            "State": "DC"
           },
           "Code": "E06",
           "Lat": 38.951777,
@@ -38580,10 +38580,10 @@
         "circuit": 1992,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "2700 Hamilton St.",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E07",
           "Lat": 38.954931,
@@ -38705,10 +38705,10 @@
         "circuit": 2009,
         "station": {
           "Address": {
-            "Zip": "20782",
             "Street": "3575 East West Highway",
-            "State": "MD",
-            "City": "Hyattsville"
+            "City": "Hyattsville",
+            "Zip": "20782",
+            "State": "MD"
           },
           "Code": "E08",
           "Lat": 38.965276,
@@ -38862,10 +38862,10 @@
         "circuit": 2030,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "4931 Calvert Road",
-            "State": "MD",
-            "City": "College Park"
+            "City": "College Park",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E09",
           "Lat": 38.978523,
@@ -39047,10 +39047,10 @@
         "circuit": 2055,
         "station": {
           "Address": {
-            "Zip": "20740",
             "Street": "5717 Greenbelt Metro Drive",
-            "State": "MD",
-            "City": "Greenbelt"
+            "City": "Greenbelt",
+            "Zip": "20740",
+            "State": "MD"
           },
           "Code": "E10",
           "Lat": 39.011036,
