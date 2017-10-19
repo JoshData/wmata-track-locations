@@ -20,8 +20,12 @@ stations = { station["Code"]: station for station in stations["Stations"]  }
 # Scan the pairs of circuit and GIS data.
 circuit_coordinates = collections.defaultdict(lambda : collections.defaultdict(lambda : 0))
 for fn in sorted(glob.glob("data/*-circuit.json.gz")):
-	circuit_locations = json.loads(gzip.open(fn).read().decode("ascii"))
-	gis_locations = json.loads(gzip.open(fn.replace("circuit", "gis")).read().decode("ascii"))
+	try:
+		circuit_locations = json.loads(gzip.open(fn).read().decode("ascii"))
+		gis_locations = json.loads(gzip.open(fn.replace("circuit", "gis")).read().decode("ascii"))
+	except Exception as e:
+		print(fn, e)
+		continue
 
 	# Map train IDs to circuit IDs and coordinates at this moment in time.
 	train_locations = { }
