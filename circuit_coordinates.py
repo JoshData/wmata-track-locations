@@ -19,7 +19,7 @@ stations = { station["Code"]: station for station in stations["Stations"]  }
 
 # Scan the pairs of circuit and GIS data.
 all_coordinates = collections.defaultdict(lambda : 0)
-circuit_coordinates = collections.defaultdict(lambda : collections.defaultdict(lambda : 0))
+circuit_coordinate_pairs = collections.defaultdict(lambda : 0)
 for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	try:
 		circuit_locations = json.loads(gzip.open(fn).read().decode("ascii"))
@@ -46,11 +46,19 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	# the circuit.
 	for train in train_locations.values():
 		if train.get("circuit") and train.get("coordinate"):
-			circuit_coordinates[train["circuit"]][train["coordinate"]] += 1 + train["duration"]
+			circuit_coordinate_pairs[(train["circuit"], train["coordinate"])] += 1 + train["duration"]
 
+# Now map circuits to particular coordinates, choosing from among the
+# coordinates that the circuit was ever paired with. To avoid coordinates
+# getting mapped to multiple circuits, start with the most common circuit-coordinate
+# pairs and go down that list, never assigning a circuit or coordinatem ore than once.
 # For each circuit, take its most common coordinate.
-for circuit, coords in circuit_coordinates.items():
-	circuit_coordinates[circuit] = sorted(coords.items(), key = lambda kv : -kv[1])[0][0]
+circuit_coordinates = { }
+seen_coordinates = set()
+for (circuit, coordinate), count in sorted(circuit_coordinate_pairs.items(), key=lambda kv:-kv[1]):
+	if circuit not in circuit_coordinates and coordinate not in seen_coordinates:
+		circuit_coordinates[circuit] = coordinate
+		seen_coordinates.add(coordinate)
 
 # Construct tracks.
 def make_location(circuit):
