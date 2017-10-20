@@ -1,5 +1,6 @@
 import glob, json, gzip, collections, urllib.request
 
+import numpy, scipy.interpolate
 import pyproj
 
 # gis.wmata.com is serving coordinates in the Web Mercator system, which was convenient for them but very odd.
@@ -60,39 +61,74 @@ for (circuit, coordinate), count in sorted(circuit_coordinate_pairs.items(), key
 		circuit_coordinates[circuit] = coordinate
 		seen_coordinates.add(coordinate)
 
-# Construct tracks.
-def make_location(circuit):
-	ret = collections.OrderedDict()
-	ret["circuit"] = circuit["CircuitId"]
-	if circuit["StationCode"]: ret["station"] = collections.OrderedDict(sorted(stations[circuit["StationCode"]].items()))
-	if circuit["CircuitId"] in circuit_coordinates: ret["location"] = dict(zip(("lng", "lat"), proj(*circuit_coordinates[circuit["CircuitId"]], inverse=True)))
-	return ret
-def make_track(route):
-	return collections.OrderedDict([
-		("line", route["LineCode"]),
-		("track", route["TrackNum"]),
-		("locations", list(map(make_location, route["TrackCircuits"]))),
+# Construct a JSON file of tracks, with each track a list of lng/lat coordinates.
+# Each coordinate is either an "interpolated" position between circuits, a
+# "circuit", or a "station". Circuit IDs and station metadata is added to
+# circuit and station points. TODO: Add non-revenue tracks which are missing
+# from the track API?
+tracks = []
+for routeinfo in sorted(routes["StandardRoutes"], key = lambda r : (r["LineCode"], r["TrackNum"])):
+	# Track metadata.
+	route = collections.OrderedDict([
+		("line", routeinfo["LineCode"]),
+		("track", routeinfo["TrackNum"]),
+		("locations", []),
 	])
-routes["StandardRoutes"].sort(key = lambda route : (route["LineCode"], route["TrackNum"]))
-tracks = list(map(make_track, routes["StandardRoutes"]))
+	tracks.append(route)
 
-# Output as plain JSON and as GeoJSON.
+	# Create an interpolation function that can give us coordinates between
+	# circuits. Quadratic interpolation should give us better circular-like curves
+	# but it gave garbage - cubic produced reasonable results.
+	#
+	# Note that we're interpolating on the raw coordinates we
+	# saved, which are in Web Mercator, and we unproject to lng/lat later.
+	# At the scale we're operating at, it doesn't really matter where we
+	# do the projection.
+	#
+	# TODO: We have some missing circuits. Remove when we have all circuits.
+	circuits = [ circuit for circuit in routeinfo["TrackCircuits"] if circuit["CircuitId"] in circuit_coordinates]
+	coords = [ circuit_coordinates[circuit["CircuitId"]] for circuit in circuits ]
+	interp = scipy.interpolate.interp1d(list(range(len(coords))), numpy.array(coords).T, kind="cubic")
+
+	# Circuits.
+	def make_coord(coord):
+		return collections.OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True)))
+	prev_circuit = None
+	for i, circuit in enumerate(circuits):
+		if prev_circuit:
+			# Add some interpolated points between the previous circuit and this one.
+			N = 10
+			for n in range(1, N):
+				coord = make_coord(interp((i-1) + n/N))
+				coord["type"] = "interpolated"
+				route["locations"].append(coord)
+
+		# Add this circuit.
+		coord = make_coord(list(interp(i))) # could go to circuit_coordinates directly but this should be the same
+		if circuit["StationCode"]:
+			coord["type"] = "station"
+			coord["station"] =  collections.OrderedDict(sorted(stations[circuit["StationCode"]].items()))
+		else:
+			coord["type"] = "circuit"
+		coord["circuit"] = circuit["CircuitId"]
+		route["locations"].append(coord)
+
+		prev_circuit = circuit
+	
+# Output as plain JSON.
 with open("tracks.json", "w") as f:
 	f.write(json.dumps(tracks, indent=2))
 
-def extract_stations():
-	seen_stations = set()
-	for tract in tracks:
-		for circuit in tract["locations"]:
-			if "station" in circuit:
-				if circuit["station"]["Code"] in seen_stations: continue
-				seen_stations.add(circuit["station"]["Code"])
-				yield circuit
-
+# Output as GeoJSON.
+def all_locations(): # yield all locations across all tracks
+	for track in tracks:
+		for location in track["locations"]:
+			yield location
 tracks_geojson = collections.OrderedDict([
 	("type", "FeatureCollection"),
 	("features",
 	[
+		# Track lines.
 		collections.OrderedDict([
 			("type", "Feature"),
 			("properties", collections.OrderedDict([
@@ -102,25 +138,27 @@ tracks_geojson = collections.OrderedDict([
 			])),
 			("geometry", collections.OrderedDict([
     	        ("type", "LineString"),
-        	    ("coordinates", [ [circuit["location"]["lng"], circuit["location"]["lat"]] for circuit in track["locations"] if "location" in circuit ]),
+        	    ("coordinates", [ [location["lng"], location["lat"]] for location in track["locations"] ]),
 	        ]))
 		])
 		for track in tracks
 	]
 	+ [
+		# Track stations.
 		collections.OrderedDict([
 			("type", "Feature"),
 			("properties", collections.OrderedDict([
 				("type", "station"),
-				("code", circuit["station"]["Code"]),
-				("name", circuit["station"]["Name"]),
+				("code", location["station"]["Code"]),
+				("name", location["station"]["Name"]),
 			])),
 			("geometry", collections.OrderedDict([
 	   	        ("type", "Point"),
-	       	    ("coordinates", [circuit["location"]["lng"], circuit["location"]["lat"]]),
+	       	    ("coordinates", [location["lng"], location["lat"]]),
 	        ]))
 		])
-		for circuit in extract_stations()
+		for location in all_locations()
+		if location["type"] == "station"
 	]
 	)
 ])
