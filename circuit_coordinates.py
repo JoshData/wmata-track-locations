@@ -32,6 +32,7 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	train_locations = { }
 	for train in circuit_locations["TrainPositions"]:
 		train_locations.setdefault(train["TrainId"], {})["circuit"] = train["CircuitId"]
+		train_locations.setdefault(train["TrainId"], {})["duration"] = train["SecondsAtLocation"]
 	for train in gis_locations["features"]:
 		# Some coordinates are very close to (0,0) which are invalid.
 		if train["geometry"]["x"]**2 + train["geometry"]["y"]**2 < 1: continue
@@ -39,10 +40,13 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 		train_locations.setdefault(train["attributes"]["ITT"], {})["coordinate"] = webmercatorcoord
 		all_coordinates[webmercatorcoord] += 1
 
-	# For every train that has both a circuit and a coordinate, remember this for this circuit.
+	# For every train that has both a circuit and a coordinate,
+	# accumulate a counter of how many times this circuit was paired with this
+	# coordinate. Weight by the amount of time the train was reported at
+	# the circuit.
 	for train in train_locations.values():
 		if train.get("circuit") and train.get("coordinate"):
-			circuit_coordinates[train["circuit"]][train["coordinate"]] += 1
+			circuit_coordinates[train["circuit"]][train["coordinate"]] += 1 + train["duration"]
 
 # For each circuit, take its most common coordinate.
 for circuit, coords in circuit_coordinates.items():
