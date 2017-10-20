@@ -12,9 +12,10 @@ Hi there. This was a quick WMATA Metro hack.
 A "track circuit" is a span of actual rail. Metro trains don't have GPS devices. Their locations are known to WMATA
 by which circuit they are currently traveling on. Each circuit is uniquely identified. WMATA doesn't officially
 publish the locations of the circuits, or for that matter the tracks. This hack combines the data they do
-publish to infer the locations of the circuits, and therefore the tracks. Each Metro line has two tracks. There
-are also tracks that are non-service tracks which are in the source data but aren't included in my output files
-at the moment.
+publish to infer the locations of the circuits, and therefore the tracks.
+
+Each Metro line has two tracks. There are also tracks that are non-service tracks which are 
+also in the output, but I haven't processed those very well yet.
 
 It's not actually clear WMATA knows the actual locations of circuits. The real
 time train map yields particular coordinates as trains pass over circuits. Those may not be actual circuit

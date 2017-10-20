@@ -67,6 +67,7 @@ for (circuit, coordinate), count in sorted(circuit_coordinate_pairs.items(), key
 # circuit and station points. TODO: Add non-revenue tracks which are missing
 # from the track API?
 tracks = []
+seen_circuit_neighbors = set()
 for routeinfo in sorted(routes["StandardRoutes"], key = lambda r : (r["LineCode"], r["TrackNum"])):
 	# Track metadata.
 	route = collections.OrderedDict([
@@ -103,6 +104,9 @@ for routeinfo in sorted(routes["StandardRoutes"], key = lambda r : (r["LineCode"
 				coord["type"] = "interpolated"
 				route["locations"].append(coord)
 
+			# Remember that we've seen the track between this pair of circuits.
+			seen_circuit_neighbors.add( (prev_circuit["CircuitId"], circuit["CircuitId"]) )
+
 		# Add this circuit.
 		coord = make_coord(list(interp(i))) # could go to circuit_coordinates directly but this should be the same
 		if circuit["StationCode"]:
@@ -114,7 +118,37 @@ for routeinfo in sorted(routes["StandardRoutes"], key = lambda r : (r["LineCode"
 		route["locations"].append(coord)
 
 		prev_circuit = circuit
-	
+
+# Add non-revenue tracks. There is track that isn't on a "line". Use the WMATA
+# TrackCircuits API to get the connectivity of all of the circuits. For now,
+# generate tracks for every pair of connected circuits that we didn't already
+# place on a track. TODO: Build up the connectivity of these circuits into tracks
+# of maximal length and then run them through the output above so that we get
+# interpolation for the long ones.
+all_circuits = json.loads(urllib.request.urlopen(urllib.request.Request("https://api.wmata.com/TrainPositions/TrackCircuits?contentType=json", headers={ "api_key": API_KEY })).read().decode("ascii"))
+for circuit1info in all_circuits["TrackCircuits"]:
+	circuit1 = circuit1info["CircuitId"]
+	if circuit1 not in circuit_coordinates: continue # no location info
+	for neighbors in circuit1info["Neighbors"]:
+		for circuit2 in neighbors["CircuitIds"]:
+			if circuit2 not in circuit_coordinates: continue # no location info
+			if (circuit1, circuit2) in seen_circuit_neighbors or (circuit2, circuit1) in seen_circuit_neighbors: continue
+			seen_circuit_neighbors.add((circuit1, circuit2))
+			c1 = make_coord(circuit_coordinates[circuit1])
+			c1["type"] = "circuit"
+			c1["circuit"] = circuit1
+			c2 = make_coord(circuit_coordinates[circuit1])
+			c2["type"] = "circuit"
+			c2["circuit"] = circuit2
+			tracks.append(collections.OrderedDict([
+				("line", None),
+				("track", circuit1info["Track"]), # "Track number. 1 and 2 denote "main" lines, while 0 and 3 are connectors (between different types of tracks) and pocket tracks, respectively"
+				("locations", [
+					c1,
+					c2,
+				]),
+			]))
+
 # Output as plain JSON.
 with open("tracks.json", "w") as f:
 	f.write(json.dumps(tracks, indent=2))
