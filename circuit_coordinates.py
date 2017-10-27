@@ -34,7 +34,7 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	for train in circuit_locations["TrainPositions"]:
 		train_locations.setdefault(train["TrainId"], {})["circuit"] = train["CircuitId"]
 		train_locations.setdefault(train["TrainId"], {})["duration"] = train["SecondsAtLocation"]
-	for train in gis_locations["features"]:
+	for train in gis_locations.get("features", []):
 		# Some coordinates are very close to (0,0) which are invalid.
 		if train["geometry"]["x"]**2 + train["geometry"]["y"]**2 < 1: continue
 		webmercatorcoord = (train["geometry"]["x"], train["geometry"]["y"])
