@@ -18,9 +18,10 @@ routes = json.loads(urllib.request.urlopen(urllib.request.Request("https://api.w
 stations = json.loads(urllib.request.urlopen(urllib.request.Request("https://api.wmata.com/Rail.svc/json/jStations", headers={ "api_key": API_KEY })).read().decode("ascii"))
 stations = { station["Code"]: station for station in stations["Stations"]  }
 
-# Scan the pairs of circuit and GIS data.
+# Scan the pairs of circuit and GIS data at corresponding points in time.
 all_coordinates = collections.defaultdict(lambda : 0)
-circuit_coordinate_pairs = collections.defaultdict(lambda : 0)
+circuit_coordinate_transition_pairs = collections.defaultdict(lambda : 0)
+prev_train_locations = None
 for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	try:
 		circuit_locations = json.loads(gzip.open(fn).read().decode("ascii"))
@@ -29,12 +30,11 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 		print(fn, e)
 		continue
 
-	# Map train IDs to circuit IDs and coordinates at this moment in time.
+	# Map train IDs to circuit IDs and train IDs to GIS coordinates at this moment in time.
 	train_locations = { }
 	for train in circuit_locations["TrainPositions"]:
-		if train["SecondsAtLocation"] > 120: continue
 		train_locations.setdefault(train["TrainId"], {})["circuit"] = train["CircuitId"]
-		train_locations.setdefault(train["TrainId"], {})["duration"] = train["SecondsAtLocation"]
+		#train_locations.setdefault(train["TrainId"], {})["duration"] = train["SecondsAtLocation"]
 	for train in gis_locations.get("features", []):
 		# Some coordinates are very close to (0,0) which are invalid.
 		if train["geometry"]["x"]**2 + train["geometry"]["y"]**2 < 1: continue
@@ -42,14 +42,20 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 		train_locations.setdefault(train["attributes"]["ITT"], {})["coordinate"] = webmercatorcoord
 		all_coordinates[webmercatorcoord] += 1
 
-	# For every train that has both a circuit and a coordinate,
-	# accumulate a counter of how many times this circuit was paired with this
-	# coordinate. Weight extra if the train was at the circuit for some duration.
-	# But don't excessively wait because we'll get other hits on this pair in future
-	# time points.
-	for train in train_locations.values():
-		if train.get("circuit") and train.get("coordinate"):
-			circuit_coordinate_pairs[(train["circuit"], train["coordinate"])] += 1 + min(train["duration"], 5)
+	# Wipe entries that don't have both a circuit and a coordinate.
+	train_locations = { train: info for train, info in train_locations.items()
+		if "circuit" in info and "coordinate" in info }
+
+	# Build a table accumulating pairs of transitions between the last location of a train and the
+	# current, different location of the train.
+	if prev_train_locations:
+		for train in set(train_locations) & set(prev_train_locations):
+			x = prev_train_locations[train]
+			y = train_locations[train]
+			if x["circuit"] == y["circuit"] or x["coordinate"] == y["coordinate"]: continue
+			circuit_coordinate_transition_pairs[((x["circuit"], x["coordinate"]), (y["circuit"], y["coordinate"]))] += 1
+	
+	prev_train_locations = train_locations
 
 # Now map circuits to particular coordinates, choosing from among the
 # coordinates that the circuit was ever paired with. To avoid coordinates
@@ -58,10 +64,11 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 # For each circuit, take its most common coordinate.
 circuit_coordinates = { }
 seen_coordinates = set()
-for (circuit, coordinate), count in sorted(circuit_coordinate_pairs.items(), key=lambda kv:-kv[1]):
-	if circuit not in circuit_coordinates and coordinate not in seen_coordinates:
-		circuit_coordinates[circuit] = coordinate
-		seen_coordinates.add(coordinate)
+for ((circuit1, coordinate1), (circuit2, coordinate2)), count in sorted(circuit_coordinate_transition_pairs.items(), key=lambda kv:-kv[1]):
+	for (circuit, coordinate) in ((circuit1, coordinate1), (circuit2, coordinate2)):
+		if circuit not in circuit_coordinates and coordinate not in seen_coordinates:
+			circuit_coordinates[circuit] = coordinate
+			seen_coordinates.add(coordinate)
 
 # Construct a JSON file of tracks, with each track a list of lng/lat coordinates.
 # Each coordinate is either an "interpolated" position between circuits, a
