@@ -14,6 +14,13 @@ for line in open("api_key.inc"):
 # Fetch from the WMATA API the ordering of circuits on the tracks.
 routes = json.loads(urllib.request.urlopen(urllib.request.Request("https://api.wmata.com/TrainPositions/StandardRoutes?contentType=json", headers={ "api_key": API_KEY })).read().decode("ascii"))
 
+# Get pairs of circuits in the order they are traversed by a train on a standard route.
+# TODO: This omits non-revenue circuits...
+ciruit_path_pairs = set()
+for route in routes["StandardRoutes"]:
+	for i in range(len(route["TrackCircuits"])-1):
+		ciruit_path_pairs.add( (route["TrackCircuits"][i]["CircuitId"], route["TrackCircuits"][i+1]["CircuitId"]) )
+
 # Fetch from the WMATA API the station information.
 stations = json.loads(urllib.request.urlopen(urllib.request.Request("https://api.wmata.com/Rail.svc/json/jStations", headers={ "api_key": API_KEY })).read().decode("ascii"))
 stations = { station["Code"]: station for station in stations["Stations"]  }
@@ -22,7 +29,7 @@ stations = { station["Code"]: station for station in stations["Stations"]  }
 all_coordinates = collections.defaultdict(lambda : 0)
 circuit_coordinate_transition_pairs = collections.defaultdict(lambda : 0)
 prev_train_locations = None
-for fn in sorted(glob.glob("data/*-circuit.json.gz")):
+for fn in sorted(glob.glob("data/*-circuit.json.gz"))[0:3000]:
 	try:
 		circuit_locations = json.loads(gzip.open(fn).read().decode("ascii"))
 		gis_locations = json.loads(gzip.open(fn.replace("circuit", "gis")).read().decode("ascii"))
@@ -47,11 +54,13 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 		if "circuit" in info and "coordinate" in info }
 
 	# Build a table accumulating pairs of transitions between the last location of a train and the
-	# current, different location of the train.
+	# current, different location of the train. Filter against known ordered circuit pairs so that
+	# we don't look at invalid transitions.
 	if prev_train_locations:
 		for train in set(train_locations) & set(prev_train_locations):
 			x = prev_train_locations[train]
 			y = train_locations[train]
+			if (x["circuit"], y["circuit"]) not in ciruit_path_pairs: continue
 			if x["circuit"] == y["circuit"] or x["coordinate"] == y["coordinate"]: continue
 			circuit_coordinate_transition_pairs[((x["circuit"], x["coordinate"]), (y["circuit"], y["coordinate"]))] += 1
 	
@@ -62,6 +71,7 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 # getting mapped to multiple circuits, start with the most common circuit-coordinate
 # pairs and go down that list, never assigning a circuit or coordinatem ore than once.
 # For each circuit, take its most common coordinate.
+max_count = max(circuit_coordinate_transition_pairs.values())
 circuit_coordinates = { }
 seen_coordinates = set()
 for ((circuit1, coordinate1), (circuit2, coordinate2)), count in sorted(circuit_coordinate_transition_pairs.items(), key=lambda kv:-kv[1]):
