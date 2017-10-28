@@ -32,6 +32,7 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 	# Map train IDs to circuit IDs and coordinates at this moment in time.
 	train_locations = { }
 	for train in circuit_locations["TrainPositions"]:
+		if train["SecondsAtLocation"] > 120: continue
 		train_locations.setdefault(train["TrainId"], {})["circuit"] = train["CircuitId"]
 		train_locations.setdefault(train["TrainId"], {})["duration"] = train["SecondsAtLocation"]
 	for train in gis_locations.get("features", []):
@@ -43,11 +44,12 @@ for fn in sorted(glob.glob("data/*-circuit.json.gz")):
 
 	# For every train that has both a circuit and a coordinate,
 	# accumulate a counter of how many times this circuit was paired with this
-	# coordinate. Weight by the amount of time the train was reported at
-	# the circuit.
+	# coordinate. Weight extra if the train was at the circuit for some duration.
+	# But don't excessively wait because we'll get other hits on this pair in future
+	# time points.
 	for train in train_locations.values():
 		if train.get("circuit") and train.get("coordinate"):
-			circuit_coordinate_pairs[(train["circuit"], train["coordinate"])] += 1 + train["duration"]
+			circuit_coordinate_pairs[(train["circuit"], train["coordinate"])] += 1 + min(train["duration"], 5)
 
 # Now map circuits to particular coordinates, choosing from among the
 # coordinates that the circuit was ever paired with. To avoid coordinates
