@@ -1,0 +1,195 @@
+# Read the archived gis.wmata.com data and infer track connectivity by
+# finding the best order of points that share a TRACK_NAME attribute.
+#
+# Convert the points from the Web Mercator projection to lat/lng.
+#
+# Save as JSON.
+#
+# Use scipy.interpolate to interpolate curves between points and export
+# that in GeoJSON.
+
+import glob, json, gzip, collections, random
+
+import numpy, scipy.interpolate
+import pyproj
+
+# gis.wmata.com is serving coordinates in the Web Mercator projection, which was convenient for them to
+# display on a map but very odd for us --- turn it into lat/lng.
+proj = pyproj.Proj("+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +units=m +no_defs ")
+
+# Scan the archived data in time order by sorting filenames. Look for ocurrences
+# where a train went from one position to another, but on the same track and going
+# in the same direction, and increment a counter, so that we know what locations
+# ocurr linearly on the track before other positions.
+
+track_lines = collections.defaultdict(lambda : set())
+train_last_seen_at = { }
+coords_on_track = collections.defaultdict(lambda : set())
+coord_transition_observations = collections.defaultdict(lambda : 0)
+window = []
+for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:300]:
+	try:
+		with gzip.open(fn) as f:
+			gis_locations = json.loads(f.read().decode("ascii"))
+	except Exception as e:
+		print(fn, e)
+		continue
+
+	# Loop over trains.
+	for train in gis_locations.get("features", []):
+		# Some coordinates are very close to (0,0) which are invalid.
+		if train["geometry"]["x"]**2 + train["geometry"]["y"]**2 < 1: continue
+		trainid = train["attributes"]["ITT"]
+		line = train["attributes"]["TRACKLINE"]
+		track = train["attributes"]["TRACKNAME"]
+		dest = train["attributes"]["DESTINATIONID"]
+		coord = (train["geometry"]["x"], train["geometry"]["y"])
+
+		# The "3" tracks are pocket tracks. They aren't continuous lines. Don't
+		# include those here --- they need to be broken up into segments.
+		if track[1] == "3": continue
+
+		# Some of the distinctly labeled tracks are actually continuous:
+		# A-B and C-D is the Red and Blue/Orange/Silver lines split at Metro Center.
+		# E-F is the Green/Yellow lines split at Gallery Place. These line's
+		# 1/2 tracks are the main tracks and the numbering is consistent. Relabel those.
+		# Otherwise we get gaps in the tracks at those two stations where the
+		# train goes from one track to another.
+		import re
+		track = re.sub("[AB]" ,"AB", track)
+		track = re.sub("[CD]" ,"CD", track)
+		track = re.sub("[EF]" ,"EF", track)
+
+		# Both halves of the fork south of L'Enfant Plaza are classified here
+		# as E1/2 tracks, and both halves of the fork north of the Pentagon
+		# are labeled as C1/2 tracks. The Yellow Line connects one half of
+		# each. There's also a fork south of Alexandria that are both C1/2
+		# tracks until one path becomes J1/2 heading to Franconia, and one
+		# south of Rosslyn that are both C1/2 until one becomes the J1/2
+		# Orange line.
+		#
+		# Forks cause a problem for us because we are trying to connect
+		# up long linear segments of track. We'll re-label some of the
+		# forks according to the line of the train running on it. This
+		# will split forks into separate track labels but also give us
+		# duplicate track segments, which we'll weed out later.
+
+		# Create a new track pair called L1/2 where the Yellow Line runs
+		# on CD (north of Pentagon to Huntington) and EF (Greenbelt to
+		# the Pentagon).
+		if track[0:2] in ("CD", "EF") and line == "Yellow": track = "L" + track[2]
+
+		# Duplicate the CD tracks used by Blue (down to Alexandria) as
+		# J tracks so that we capture the segment where C and J merge.
+		if track[0:2] == "CD" and line == "Blue": track = "J" + track[-1]
+
+		# Map all of the Silver tracks to N.
+		if line == "Silver": track = "N" + track[-1]
+
+		# Split out the Non-revenue routes which go along some unusual paths.
+		if line == "Non-revenue": track += "*"
+
+		# Remember that we saw this coordinate on this track.
+		coords_on_track[track].add(coord)
+		track_lines[track].add(line)
+
+		# If the train is at a different position than when we last saw it
+		# but on the same track + track direction, and not that long ago,
+		# increment a counter for this transition.
+		if trainid in train_last_seen_at \
+			and train_last_seen_at[trainid][0] in window \
+			and train_last_seen_at[trainid][1:3] == (track, dest) \
+			and train_last_seen_at[trainid][3] != coord:
+			coord_transition_observations[(track, train_last_seen_at[trainid][3], coord)] += 1
+		train_last_seen_at[trainid] = (fn, track, dest, coord)
+
+		# Keep a sliding window of recent filenames.
+		window.append(fn)
+		if len(window) > 4: window.pop(0) # if files were at 15sec intervals, then this limits to 1 minute
+
+# We now have all of the coordinates on all of the tracks, but we don't know
+# what order they ocurr in. Infer the order.
+def vec(c1, c2): return (c2[0]-c1[0], c2[1]-c1[1])
+def dot(v1, v2): return (v1[0]*v2[0] + v1[1]*v2[1])
+def dist(c1, c2): return dot(vec(c1, c2), vec(c1, c2))**.5
+def infer_track_order(trackname):
+	# Start with an empty track.
+	track = []
+
+	# Define a function that says how good this order is.
+	def score_track_order(track):
+		# The closer to 1 the cosines are along the path, the
+		# straighter the path is.
+		score = 0
+		for i in range(len(track)-2):
+			c0 = track[i]
+			c1 = track[i+1]
+			c2 = track[i+2]
+			v1 = vec(c0, c1)
+			v2 = vec(c1, c2)
+			cosine = dot(v1, v2) / (dot(v1, v1)**.5 * dot(v2, v2)**.5)
+			score -= (1 - cosine) * (dist(c0, c1) + dist(c1, c2))
+		return score
+
+	best_score = None
+	while len(track) < len(coords_on_track[trackname]):
+		if len(track) == 0:
+			# If the track is empty, add a random coordinate.
+			track.append(random.choice(list(coords_on_track[trackname])))
+
+		else:
+			# Add the coordinate that's nearest to any coordinate already on the track.
+			coord = min([c for c in coords_on_track[trackname] if c not in track],
+				key = lambda coord : min(dist(c2, coord) for c2 in track))
+
+			# Add it in the position in the track so far that keeps the track the smoothest.
+			best_index = 0
+			best_score = None
+			for index in range(len(track)+1):
+				score = score_track_order(track[:index] + [coord] + track[index:])
+				if best_score is None or score > best_score:
+					best_index = index
+					best_score = score
+			track.insert(best_index, coord)
+
+	print(trackname, best_score)
+	
+	return track	
+
+# Construct a JSON data structure for the tracks.		
+tracks = [
+	collections.OrderedDict([
+		("id", trackname),
+		("line", ", ".join(sorted(track_lines[trackname]))),
+		("path", [collections.OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True))) for coord in infer_track_order(trackname) ]),
+	])
+	for trackname in sorted(coords_on_track)
+]
+with open("tracks.json", "w") as f:
+    f.write(json.dumps(tracks, indent=2))
+
+# Also write out in GeoJSON as linestrings, which is useful for quick
+# plotting but loses the metadata on coordinates.
+tracks_geojson = collections.OrderedDict([
+    ("type", "FeatureCollection"),
+    ("features",
+    [
+        # Track lines.
+        collections.OrderedDict([
+            ("type", "Feature"),
+            ("properties", collections.OrderedDict([
+                ("type", "track"),
+                ("track", track["id"]),
+                ("line", track["line"]),
+            ])),
+            ("geometry", collections.OrderedDict([
+                ("type", "LineString"),
+                ("coordinates", [ [pt["lng"], pt["lat"]] for pt in track["path"] ]),
+            ]))
+        ])
+        for track in tracks
+    ])
+	])
+with open("tracks.geojson", "w") as f:
+    f.write(json.dumps(tracks_geojson, indent=2))
+
