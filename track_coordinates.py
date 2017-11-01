@@ -1,16 +1,11 @@
 # Read the archived gis.wmata.com data and infer track connectivity by
 # finding the best order of points that share a TRACK_NAME attribute.
-#
-# Convert the points from the Web Mercator projection to lat/lng.
-#
-# Save as JSON.
-#
-# Use scipy.interpolate to interpolate curves between points and export
-# that in GeoJSON.
+# Work around TRACK_NAME tracks having forks that prevent there being
+# a single order of points. Save as JSON and GeoJSON. Convert points
+# from the Web Mercator projection to lat/lng.
 
 import glob, json, gzip, collections, random
 
-import numpy, scipy.interpolate
 import pyproj
 
 # gis.wmata.com is serving coordinates in the Web Mercator projection, which was convenient for them to
@@ -27,7 +22,7 @@ train_last_seen_at = { }
 coords_on_track = collections.defaultdict(lambda : set())
 coord_transition_observations = collections.defaultdict(lambda : 0)
 window = []
-for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:300]:
+for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:200]:
 	try:
 		with gzip.open(fn) as f:
 			gis_locations = json.loads(f.read().decode("ascii"))
@@ -48,6 +43,9 @@ for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:300]:
 		# The "3" tracks are pocket tracks. They aren't continuous lines. Don't
 		# include those here --- they need to be broken up into segments.
 		if track[1] == "3": continue
+
+		# Skip the Non-revenue routes which go along some unusual paths.
+		if line == "Non-revenue": continue
 
 		# Some of the distinctly labeled tracks are actually continuous:
 		# A-B and C-D is the Red and Blue/Orange/Silver lines split at Metro Center.
@@ -79,15 +77,14 @@ for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:300]:
 		# the Pentagon).
 		if track[0:2] in ("CD", "EF") and line == "Yellow": track = "L" + track[2]
 
-		# Duplicate the CD tracks used by Blue (down to Alexandria) as
+		# Turn the J tracks (Alexandria to Franconia) into CD tracks so
+		# that they smoothly connect up to the CD tracks (otherwise we
+		# get a gap).
 		# J tracks so that we capture the segment where C and J merge.
-		if track[0:2] == "CD" and line == "Blue": track = "J" + track[-1]
+		if track[0] == "J" and line == "Blue": track = "CD" + track[-1]
 
-		# Map all of the Silver tracks to N.
+		# Map all of the Silver track to N.
 		if line == "Silver": track = "N" + track[-1]
-
-		# Split out the Non-revenue routes which go along some unusual paths.
-		if line == "Non-revenue": track += "*"
 
 		# Remember that we saw this coordinate on this track.
 		coords_on_track[track].add(coord)
@@ -139,13 +136,24 @@ def infer_track_order(trackname):
 
 		else:
 			# Add the coordinate that's nearest to any coordinate already on the track.
-			coord = min([c for c in coords_on_track[trackname] if c not in track],
-				key = lambda coord : min(dist(c2, coord) for c2 in track))
+			# Remember which one it is nearest too.
+			coord = None
+			coord_peg = None
+			coord_dist = None
+			for c1 in coords_on_track[trackname]:
+				if c1 in track: continue
+				for i, c2 in enumerate(track):
+					d = dist(c1, c2)
+					if coord is None or d < coord_dist:
+						coord = c1
+						coord_peg = i
+						coord_dist = d
 
-			# Add it in the position in the track so far that keeps the track the smoothest.
+			# Add it in the position in the track so far that keeps the track the smoothest,
+			# either before or after the coordinate on the track it is closest to.
 			best_index = 0
 			best_score = None
-			for index in range(len(track)+1):
+			for index in [coord_peg, coord_peg+1]:
 				score = score_track_order(track[:index] + [coord] + track[index:])
 				if best_score is None or score > best_score:
 					best_index = index
@@ -154,16 +162,63 @@ def infer_track_order(trackname):
 
 	print(trackname, best_score)
 	
-	return track	
+	return track
+
+# Generate ordered tracks.
+tracks = { trackname: infer_track_order(trackname) for trackname in sorted(coords_on_track) }
+
+# In order to break up forks to different tracks, and to fill in gaps
+# between track segments, we ended up duplicating some track segments.
+# De-dup track segments now, giving preference to earlier tracks.
+seen_segments = set()
+deduped_tracks = {}
+for track, path in sorted(tracks.items()):
+	tracksegs = [[]]
+	for i in range(len(path)-1):
+		seg = (path[i], path[i+1])
+		if seg in seen_segments:
+			# Break the track here.
+			if tracksegs[-1] != []:
+				tracksegs.append([])
+			continue
+		else:
+			# This segment is fresh. Add the first point in the
+			# seg if we're at the start of a new trackseg, otherwise
+			# just add the second point since we added the first point
+			# as the end of the last seg last iteration.
+			if tracksegs[-1] == []:
+				tracksegs[-1].append(seg[0])
+			tracksegs[-1].append(seg[1])
+			seen_segments.add(seg)
+
+	# Remove empty tracksegs and degenerate tracksegs with fewer than
+	# five coordinates - no real revenue line is so short.
+	tracksegs = list(filter(lambda seg : len(seg) > 5, tracksegs))
+
+	# How many segments did this track get split into?
+	print(track, len(tracksegs))
+
+	# If de-duping resulted in one contiguous segment (but maybe smaller
+	# than the original if the ends were trimmed), name it the same
+	# as the original.
+	if len(tracksegs) == 1:
+		deduped_tracks[track] = tracksegs[0]
+
+	# If de-duping resulted in multiple sub-segments, name them uniquely.
+	else:
+		for i, ts in enumerate(tracksegs):
+			deduped_tracks[track + chr(ord('a')+i)] = ts
+			
+tracks = deduped_tracks
 
 # Construct a JSON data structure for the tracks.		
 tracks = [
 	collections.OrderedDict([
 		("id", trackname),
 		("line", ", ".join(sorted(track_lines[trackname]))),
-		("path", [collections.OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True))) for coord in infer_track_order(trackname) ]),
+		("path", [collections.OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True))) for coord in path ]),
 	])
-	for trackname in sorted(coords_on_track)
+	for trackname, path in sorted(tracks.items())
 ]
 with open("tracks.json", "w") as f:
     f.write(json.dumps(tracks, indent=2))
