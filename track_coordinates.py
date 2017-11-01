@@ -162,7 +162,8 @@ def infer_track_order(trackname):
 			# either before or after the coordinate on the track it is closest to.
 			best_index = 0
 			best_score = None
-			for index in [coord_peg, coord_peg+1]:
+			#for index in [coord_peg, coord_peg+1]:
+			for index in range(len(track)+1):
 				score = score_track_order(track[:index] + [coord] + track[index:])
 				if best_score is None or score > best_score:
 					best_index = index
