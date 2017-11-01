@@ -22,7 +22,7 @@ train_last_seen_at = { }
 coords_on_track = collections.defaultdict(lambda : set())
 coord_transition_observations = collections.defaultdict(lambda : 0)
 window = []
-for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:200]:
+for fn in sorted(glob.glob("data/*-gis.json.gz")):
 	try:
 		with gzip.open(fn) as f:
 			gis_locations = json.loads(f.read().decode("ascii"))
@@ -42,7 +42,7 @@ for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:200]:
 
 		# The "3" tracks are pocket tracks. They aren't continuous lines. Don't
 		# include those here --- they need to be broken up into segments.
-		if track[1] == "3": continue
+		if track[1] not in ("1", "2"): continue
 
 		# Skip the Non-revenue routes which go along some unusual paths.
 		if line == "Non-revenue": continue
@@ -57,6 +57,15 @@ for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:200]:
 		track = re.sub("[AB]" ,"AB", track)
 		track = re.sub("[CD]" ,"CD", track)
 		track = re.sub("[EF]" ,"EF", track)
+
+		# Ignore crazy routes.
+		if track[0:2] == "AB" and line != "Red": continue
+		if track[0:2] == "CD" and line not in ("Blue", "Orange", "Silver"): continue
+		if track[0:2] == "EF" and line not in ("Yellow", "Green"): continue
+		if track[0] == "G" and line != "Blue": continue # to Largo
+		if track[0] == "J" and line != "Blue": continue # to Franconia
+		if track[0] == "K" and line != "Orange": continue # to Vienna
+		if track[0] == "N" and line != "Silver": continue # to Whiele
 
 		# Both halves of the fork south of L'Enfant Plaza are classified here
 		# as E1/2 tracks, and both halves of the fork north of the Pentagon
