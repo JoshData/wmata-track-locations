@@ -1,18 +1,18 @@
 # WMATA Track Geospatial Data
 
-Hi there. This is WMATA Metro hack to produce a high-resolution track map. Currently only revenue tracks are working.
+Hi there. This is a WMATA Metro civic hack to produce a high-resolution track map. Currently only revenue tracks are working.
 
 [Tracks.geojson](tracks.geojson)
 
-I collected real time train location data from the [WMATA API](https://developer.wmata.com/docs/services/5763fa6ff91823096cac1057/operations/5763fb35f91823096cac1058)
-(which provides real time "circuit numbers") and the [WMATA Real Time Train Map](gis.wmata.com/metrotrain/index.html)
-(which provides real time train lat/lng coordinates) every 15 seconds over the course of about two weeks. (It's 750 MB compressed data.)
+I collected real time train location data from  the [WMATA Real Time Train Map](gis.wmata.com/metrotrain/index.html)
+(which provides real time train lat/lng coordinates) every 15 seconds over the course of about two weeks. (It's 300 MB compressed data.)
 
-I first wanted to match up the lat/lng coordinates with the circuit numbers, but the data was too inconsistent
---- the two data sources didn't line up enough to reliably match up the data and not all circuits or coordinates
-are reported in all train runs. Note that the data is train positions at points in time but because not all
-circuits or coordinates appear in every run, it doesn't obviously tell you what the actual order of the
-coordinates or circuits are on the lines. WMATA has an API that gives the order of circuits on the lines,
+I first wanted to match up the lat/lng coordinates with the real time train position circuit numbers
+from the [WMATA API](https://developer.wmata.com/docs/services/5763fa6ff91823096cac1057/operations/5763fb35f91823096cac1058),
+but the data was too inconsistent --- the two data sources didn't line up enough to reliably match up the data.
+Note that the data is train positions at points in time but because not all
+circuits or coordinates appear in every train run, it doesn't obviously tell you what the actual order of the
+coordinates or circuits are on the train lines. WMATA has an API that gives the order of circuits on the lines,
 but not the coordinates.
 
 So I wrote a script to infer the order of all of the observed locations of trains on the revenue tracks.
@@ -23,11 +23,11 @@ back to that.
 
 The revenue track paths are stored in [tracks.json](tracks.json). The tracks are named roughly after WMATA's
 internal names for the tracks (AB1 being the Glenmont-bound Red line track, which is the combination of
-WMATA's A1 (west of Metro Center) and B1 (east of Metro Center). But some of the names differ because of the
+WMATA's A1 (west of Metro Center) and B1 (east of Metro Center)). But some of the names differ because of the
 data processing involved.
 
 I then used scipy to interpolate the locations between observed train coordinates to create smooth curved tracks.
-The interpolated paths are stored in [tracks.geojson](https://github.com/JoshData/wmata-track-locations/blob/master/tracks.geojson)).
+The interpolated paths are stored in [tracks.geojson](https://github.com/JoshData/wmata-track-locations/blob/master/tracks.geojson).
 
 WIP:
 
