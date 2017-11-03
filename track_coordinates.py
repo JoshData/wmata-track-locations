@@ -4,7 +4,8 @@
 # a single order of points. Save as JSON and GeoJSON. Convert points
 # from the Web Mercator projection to lat/lng.
 
-import glob, json, gzip, collections, random
+import glob, json, gzip, random
+from collections import defaultdict, OrderedDict
 
 import pyproj
 
@@ -17,10 +18,11 @@ proj = pyproj.Proj("+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137
 # in the same direction, and increment a counter, so that we know what locations
 # ocurr linearly on the track before other positions.
 
-track_lines = collections.defaultdict(lambda : set())
+track_lines = defaultdict(lambda : set())
 train_last_seen_at = { }
-coords_on_track = collections.defaultdict(lambda : set())
-coord_transition_observations = collections.defaultdict(lambda : 0)
+coords_on_track = defaultdict(lambda : set())
+coord_observations = defaultdict(lambda : 0)
+coord_transition_observations = defaultdict(lambda : 0)
 window = []
 for fn in sorted(glob.glob("data/*-gis.json.gz")):
 	try:
@@ -98,6 +100,7 @@ for fn in sorted(glob.glob("data/*-gis.json.gz")):
 		# Remember that we saw this coordinate on this track.
 		coords_on_track[track].add(coord)
 		track_lines[track].add(line)
+		coord_observations[(coord, track)] += 1
 
 		# If the train is at a different position than when we last saw it
 		# but on the same track + track direction, and not that long ago,
@@ -118,7 +121,13 @@ for fn in sorted(glob.glob("data/*-gis.json.gz")):
 def vec(c1, c2): return (c2[0]-c1[0], c2[1]-c1[1])
 def dot(v1, v2): return (v1[0]*v2[0] + v1[1]*v2[1])
 def dist(c1, c2): return dot(vec(c1, c2), vec(c1, c2))**.5
+def median(a) : return sorted(a)[int(len(a)/2)]
 def infer_track_order(trackname):
+	# What coordinates are on this track? Skip ones that were observed
+	# only a few times --- these are data oddities.
+	m = median([v for k, v in coord_observations.items() if k[1] == trackname])
+	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/2 }
+
 	# Start with an empty track.
 	track = []
 
@@ -138,10 +147,10 @@ def infer_track_order(trackname):
 		return score
 
 	best_score = None
-	while len(track) < len(coords_on_track[trackname]):
+	while len(track) < len(coords):
 		if len(track) == 0:
 			# If the track is empty, add a random coordinate.
-			track.append(random.choice(list(coords_on_track[trackname])))
+			track.append(random.choice(list(coords)))
 
 		else:
 			# Add the coordinate that's nearest to any coordinate already on the track.
@@ -149,7 +158,7 @@ def infer_track_order(trackname):
 			coord = None
 			coord_peg = None
 			coord_dist = None
-			for c1 in coords_on_track[trackname]:
+			for c1 in coords:
 				if c1 in track: continue
 				for i, c2 in enumerate(track):
 					d = dist(c1, c2)
@@ -162,8 +171,8 @@ def infer_track_order(trackname):
 			# either before or after the coordinate on the track it is closest to.
 			best_index = 0
 			best_score = None
-			#for index in [coord_peg, coord_peg+1]:
-			for index in range(len(track)+1):
+			for index in [coord_peg, coord_peg+1]:
+			#for index in range(len(track)+1):
 				score = score_track_order(track[:index] + [coord] + track[index:])
 				if best_score is None or score > best_score:
 					best_index = index
@@ -223,10 +232,10 @@ tracks = deduped_tracks
 
 # Construct a JSON data structure for the tracks.		
 tracks = [
-	collections.OrderedDict([
+	OrderedDict([
 		("id", trackname),
 		("line", ", ".join(sorted(track_lines[trackname]))),
-		("path", [collections.OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True))) for coord in path ]),
+		("path", [OrderedDict(zip(("lng", "lat"), proj(*coord, inverse=True))) for coord in path ]),
 	])
 	for trackname, path in sorted(tracks.items())
 ]
@@ -235,19 +244,19 @@ with open("tracks.json", "w") as f:
 
 # Also write out in GeoJSON as linestrings, which is useful for quick
 # plotting but loses the metadata on coordinates.
-tracks_geojson = collections.OrderedDict([
+tracks_geojson = OrderedDict([
     ("type", "FeatureCollection"),
     ("features",
     [
         # Track lines.
-        collections.OrderedDict([
+        OrderedDict([
             ("type", "Feature"),
-            ("properties", collections.OrderedDict([
+            ("properties", OrderedDict([
                 ("type", "track"),
                 ("track", track["id"]),
                 ("line", track["line"]),
             ])),
-            ("geometry", collections.OrderedDict([
+            ("geometry", OrderedDict([
                 ("type", "LineString"),
                 ("coordinates", [ [pt["lng"], pt["lat"]] for pt in track["path"] ]),
             ]))
