@@ -24,7 +24,7 @@ coords_on_track = defaultdict(lambda : set())
 coord_observations = defaultdict(lambda : 0)
 coord_transition_observations = defaultdict(lambda : 0)
 window = []
-for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:10000]:
+for fn in sorted(glob.glob("data/*-gis.json.gz")):
 	try:
 		with gzip.open(fn) as f:
 			gis_locations = json.loads(f.read().decode("ascii"))
@@ -163,7 +163,7 @@ def infer_track_order(trackname):
 	# What coordinates are on this track? Skip ones that were observed
 	# only a few times --- these are data oddities.
 	m = median([v for k, v in coord_observations.items() if k[1] == trackname])
-	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/10 }
+	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/2 }
 
 	# Start with an empty track.
 	track = []
