@@ -24,7 +24,7 @@ coords_on_track = defaultdict(lambda : set())
 coord_observations = defaultdict(lambda : 0)
 coord_transition_observations = defaultdict(lambda : 0)
 window = []
-for fn in sorted(glob.glob("data/*-gis.json.gz")):
+for fn in sorted(glob.glob("data/*-gis.json.gz"))[0:10000]:
 	try:
 		with gzip.open(fn) as f:
 			gis_locations = json.loads(f.read().decode("ascii"))
@@ -49,53 +49,90 @@ for fn in sorted(glob.glob("data/*-gis.json.gz")):
 		# Skip the Non-revenue routes which go along some unusual paths.
 		if line == "Non-revenue": continue
 
-		# Some of the distinctly labeled tracks are actually continuous:
-		# A-B and C-D is the Red and Blue/Orange/Silver lines split at Metro Center.
-		# E-F is the Green/Yellow lines split at Gallery Place. These line's
-		# 1/2 tracks are the main tracks and the numbering is consistent. Relabel those.
-		# Otherwise we get gaps in the tracks at those two stations where the
-		# train goes from one track to another.
-		import re
-		track = re.sub("[AB]" ,"AB", track)
-		track = re.sub("[CD]" ,"CD", track)
-		track = re.sub("[EF]" ,"EF", track)
-
 		# Ignore crazy routes.
-		if track[0:2] == "AB" and line != "Red": continue
-		if track[0:2] == "CD" and line not in ("Blue", "Orange", "Silver"): continue
-		if track[0:2] == "EF" and line not in ("Yellow", "Green"): continue
+		if track[0] in "AB" and line != "Red": continue
+		if track[0] == "C" and line not in ("Blue", "Orange", "Silver", "Yellow"): continue
+		if track[0] == "D" and line not in ("Blue", "Orange", "Silver"): continue
+		if track[0] in "EF" and line not in ("Yellow", "Green"): continue
 		if track[0] == "G" and line != "Blue": continue # to Largo
 		if track[0] == "J" and line != "Blue": continue # to Franconia
-		if track[0] == "K" and line != "Orange": continue # to Vienna
+		if track[0] == "K" and line not in ("Orange", "Silver"): continue # to Vienna
 		if track[0] == "N" and line != "Silver": continue # to Whiele
 
 		# Both halves of the fork south of L'Enfant Plaza are classified here
-		# as E1/2 tracks, and both halves of the fork north of the Pentagon
+		# as F1/2 tracks, and both halves of the fork north of the Pentagon
 		# are labeled as C1/2 tracks. The Yellow Line connects one half of
 		# each. There's also a fork south of Alexandria that are both C1/2
 		# tracks until one path becomes J1/2 heading to Franconia, and one
-		# south of Rosslyn that are both C1/2 until one becomes the J1/2
+		# south of Rosslyn that are both C1/2 until one becomes the K1/2
 		# Orange line.
 		#
 		# Forks cause a problem for us because we are trying to connect
 		# up long linear segments of track. We'll re-label some of the
 		# forks according to the line of the train running on it. This
 		# will split forks into separate track labels but also give us
-		# duplicate track segments, which we'll weed out later.
+		# duplicate track segments, which we'll de-dup later.
 
 		# Create a new track pair called L1/2 where the Yellow Line runs
-		# on CD (north of Pentagon to Huntington) and EF (Greenbelt to
-		# the Pentagon).
-		if track[0:2] in ("CD", "EF") and line == "Yellow": track = "L" + track[2]
+		# on CD (just north of Pentagon through Huntington) and EF
+		# (Greenbelt to just south of L'Enfant). This fixes the L'Enfant,
+		# Pentagon, and Alexandria forks because in each of those the
+		# Yellow line exclusively serves the CD tracks. This leaves just
+		# the Blue line on the (actual) CD tracks south of Rosslyn.
+		if track[0] in ("C", "F") and line == "Yellow": track = "L" + track[1]
 
-		# Turn the J tracks (Alexandria to Franconia) into CD tracks so
-		# that they smoothly connect up to the CD tracks (otherwise we
-		# get a gap).
-		# J tracks so that we capture the segment where C and J merge.
-		if track[0] == "J" and line == "Blue": track = "CD" + track[-1]
+		# Fix the Rosslyn fork by assigning Blue-line trains on C1/2
+		# (Metro Center to Alexandria) to J1/2 (which is actually Alexandria
+		# to Franconia). That leaves only Orange/Silver on CD1/2, running
+		# through to the K tracks.
+		if track[0] == "C" and line == "Blue": track = "J" + track[1]
 
-		# Map all of the Silver track to N.
-		if line == "Silver": track = "N" + track[-1]
+		# Unfortunately we still have some gaps. Since coordinates are
+		# reported to be on only one track, we don't have explicit data
+		# on locations where tracks merge.
+		#
+		# Map Blue-line trains on D tracks to G tracks so G continues
+		# smoothly to Metro Center. Likewise for Silver-line trains on K tracks,
+		# which we'll map to N. We will de-dup overlaps later.
+		if track[0] == "D" and line == "Blue": track = "G" + track[1]
+		if track[0] == "K" and line == "Silver": track = "N" + track[1]
+
+		# We can fix the break between C and K east of Rosslyn by renaming
+		# K to C, since C now terminates there (since we are calling Rosslyn
+		# to Franconia J).
+		if track[0] == "K": track = "C" + track[1]
+
+
+		# Re-label the tracks because we have mangled them from some
+		# connection to WMATA internal labeling.
+		TRACK_RELABEL = {
+			# Some of the distinctly labeled tracks are actually continuous:
+			# A-B and C-D is the Red and Blue/Orange/Silver lines split at Metro Center.
+			# E-F is the Green/Yellow lines split at Gallery Place. These line's
+			# 1/2 tracks are the main tracks and the numbering is consistent. Relabel those.
+			# Otherwise we get gaps in the tracks at those two stations where the
+			# train goes from one track to another.
+			"A1": "RED1", "A2": "RED2", # Shady Grove to Metro Center & reverse
+			"B1": "RED1", "B2": "RED2",  # Metro Center to Glenmont & reverse
+			"C1": "ORANGE1", "C2": "ORANGE2", # Huntington to Metro Center (with a spur in the fork at Pentagon) & reverse
+			"D1": "ORANGE1", "D2": "ORANGE2", # Metro Center to New Carrolton & reverse
+			"E1": "GREEN1", "E2": "GREEN2", # Gallery Place to Greenbelt & reverse
+			"F1": "GREEN1", "F2": "GREEN2",  # Gallery Place to Branch Ave (with a spur in the fork at L'Enfant) & reverse
+			
+			# The two blue segments that we're left with are not connected...
+			"G1": "BLUEA1", "G2": "BLUEA2", # Stadium to Largo & reverse
+			"J1": "BLUEB1", "J2": "BLUEB2", # Franconia to Alexandria & reverse
+			
+			# "K1": "ORANGE1", "K2": "ORANGE2", # Vienna to Rosslyn & reverse --- no longer exists after our mangling
+
+			# Silver is silver.
+			"N1": "SILVER1", "N2": "SILVER2", # Whiele to East Falls Church & reverse
+
+			 # We created this one covering Huntington to Greenbelt & reverse, overlapping with some others
+			"L1": "YELLOW1", "L2": "YELLOW2",
+		}
+		track = TRACK_RELABEL[track]
+
 
 		# Remember that we saw this coordinate on this track.
 		coords_on_track[track].add(coord)
@@ -126,7 +163,7 @@ def infer_track_order(trackname):
 	# What coordinates are on this track? Skip ones that were observed
 	# only a few times --- these are data oddities.
 	m = median([v for k, v in coord_observations.items() if k[1] == trackname])
-	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/2 }
+	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/10 }
 
 	# Start with an empty track.
 	track = []
@@ -171,7 +208,7 @@ def infer_track_order(trackname):
 			# either before or after the coordinate on the track it is closest to.
 			best_index = 0
 			best_score = None
-			for index in [coord_peg, coord_peg+1]:
+			for index in range(max(0, coord_peg-5), min(len(track)+1, coord_peg+5)):
 			#for index in range(len(track)+1):
 				score = score_track_order(track[:index] + [coord] + track[index:])
 				if best_score is None or score > best_score:
@@ -188,10 +225,11 @@ tracks = { trackname: infer_track_order(trackname) for trackname in sorted(coord
 
 # In order to break up forks to different tracks, and to fill in gaps
 # between track segments, we ended up duplicating some track segments.
-# De-dup track segments now, giving preference to earlier tracks.
+# De-dup track segments now, giving preference to ORANGE so that BLUEA,
+# BLUEB don't break it up.
 seen_segments = set()
 deduped_tracks = {}
-for track, path in sorted(tracks.items()):
+for track, path in sorted(tracks.items(), key = lambda kv : kv[0] not in ("ORANGE1", "ORANGE2", "GREEN1", "GREEN2")):
 	tracksegs = [[]]
 	for i in range(len(path)-1):
 		seg = (path[i], path[i+1])
@@ -240,7 +278,7 @@ tracks = [
 	for trackname, path in sorted(tracks.items())
 ]
 with open("tracks.json", "w") as f:
-    f.write(json.dumps(tracks, indent=2))
+	f.write(json.dumps(tracks, indent=2))
 
 # Also write out in GeoJSON as linestrings, which is useful for quick
 # plotting but loses the metadata on coordinates.

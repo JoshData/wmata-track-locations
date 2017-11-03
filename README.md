@@ -21,10 +21,7 @@ a way that keeps the track smooth, and the revenue tracks are long and easy to w
 (pocket tracks, yards, the two spurs connecting Red to the other trunks) are tiny and numerous, so I'll come
 back to that.
 
-The revenue track paths are stored in [tracks.json](tracks.json). The tracks are named roughly after WMATA's
-internal names for the tracks (AB1 being the Glenmont-bound Red line track, which is the combination of
-WMATA's A1 (west of Metro Center) and B1 (east of Metro Center)). But some of the names differ because of the
-data processing involved.
+The revenue track paths are stored in [tracks.json](tracks.json). 
 
 I then used scipy to interpolate the locations between observed train coordinates to create smooth curved tracks.
 The interpolated paths are stored in [tracks.geojson](https://github.com/JoshData/wmata-track-locations/blob/master/tracks.geojson).
