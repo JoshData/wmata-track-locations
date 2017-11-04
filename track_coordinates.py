@@ -20,7 +20,6 @@ proj = pyproj.Proj("+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137
 
 track_lines = defaultdict(lambda : set())
 train_last_seen_at = { }
-coords_on_track = defaultdict(lambda : set())
 coord_observations = defaultdict(lambda : 0)
 coord_transition_observations = defaultdict(lambda : 0)
 window = []
@@ -133,11 +132,8 @@ for fn in sorted(glob.glob("data/*-gis.json.gz")):
 		}
 		track = TRACK_RELABEL[track]
 
-
-		# Remember that we saw this coordinate on this track.
-		coords_on_track[track].add(coord)
-		track_lines[track].add(line)
-		coord_observations[(coord, track)] += 1
+		# Increment counters when we see trains move. There are some weirdly positioned
+		# trains sometimes that don't move for a while, and those throw off the counter.
 
 		# If the train is at a different position than when we last saw it
 		# but on the same track + track direction, and not that long ago,
@@ -146,7 +142,15 @@ for fn in sorted(glob.glob("data/*-gis.json.gz")):
 			and train_last_seen_at[trainid][0] in window \
 			and train_last_seen_at[trainid][1:3] == (track, dest) \
 			and train_last_seen_at[trainid][3] != coord:
+
+			# Remember that we saw this coordinate on this track.
+			coord_observations[(coord, track)] += 1
+	
+			# Remember that we saw this line on this track.
+			track_lines[track].add(line)
+
 			coord_transition_observations[(track, train_last_seen_at[trainid][3], coord)] += 1
+
 		train_last_seen_at[trainid] = (fn, track, dest, coord)
 
 		# Keep a sliding window of recent filenames.
@@ -163,7 +167,7 @@ def infer_track_order(trackname):
 	# What coordinates are on this track? Skip ones that were observed
 	# only a few times --- these are data oddities.
 	m = median([v for k, v in coord_observations.items() if k[1] == trackname])
-	coords = { c for c in coords_on_track[trackname]  if coord_observations[(c, trackname)] >= m/2 }
+	coords = { c for c, t in coord_observations if t == trackname and coord_observations[(c, t)] >= m/5 }
 
 	# Start with an empty track.
 	track = []
@@ -221,7 +225,8 @@ def infer_track_order(trackname):
 	return track
 
 # Generate ordered tracks.
-tracks = { trackname: infer_track_order(trackname) for trackname in sorted(coords_on_track) }
+all_track_names = set(t for c, t in coord_observations)
+tracks = { trackname: infer_track_order(trackname) for trackname in all_track_names }
 
 # In order to break up forks to different tracks, and to fill in gaps
 # between track segments, we ended up duplicating some track segments.
